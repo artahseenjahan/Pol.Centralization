@@ -1,0 +1,1300 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/tahseenjahan/Downloads/codes2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Apr 2024, 11:58:26
+
+{com}.  xtreg lnnewgcapf_usd cen lnnew_gsav_usd lnnewgnexp_usd, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,318
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9462{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9945{col 63}{txt}avg{col 67}={col 69}{res}      42.5
+{txt}     overall = {res}0.9814{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}3{txt},{res}1284{txt}){col 67}={col 70}{res}  7522.96
+{txt}corr(u_i, Xb){col 16}= {res}0.1424{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf_usd{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      t{col 48}   P>|t|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 11}cen {c |}{col 16}{res}{space 2}-.1121955{col 28}{space 2} .0941341{col 39}{space 1}   -1.19{col 48}{space 3}0.234{col 56}{space 4} -.296869{col 69}{space 3}  .072478
+{txt}lnnew_gsav_usd {c |}{col 16}{res}{space 2} .0854755{col 28}{space 2} .0108388{col 39}{space 1}    7.89{col 48}{space 3}0.000{col 56}{space 4} .0642119{col 69}{space 3} .1067392
+{txt}lnnewgnexp_usd {c |}{col 16}{res}{space 2} .9114425{col 28}{space 2} .0099159{col 39}{space 1}   91.92{col 48}{space 3}0.000{col 56}{space 4} .8919894{col 69}{space 3} .9308955
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2}-1.190628{col 28}{space 2} .1928537{col 39}{space 1}   -6.17{col 48}{space 3}0.000{col 56}{space 4}-1.568971{col 69}{space 3}-.8122848
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res} .12154765
+       {txt}sigma_e {c |} {res} .24223314
+           {txt}rho {c |} {res} .20113935{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1284{txt}) = {res}8.71{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. tab country,gen(cdum)
+
+       {txt}country {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+       Albania {c |}{res}         32        2.15        2.15
+{txt}       Austria {c |}{res}         63        4.23        6.37
+{txt}    Bangladesh {c |}{res}         50        3.35        9.73
+{txt}       Belgium {c |}{res}         63        4.23       13.95
+{txt}      Bulgaria {c |}{res}         32        2.15       16.10
+{txt}       Croatia {c |}{res}         31        2.08       18.18
+{txt}Czech Republic {c |}{res}         27        1.81       19.99
+{txt}       Denmark {c |}{res}         63        4.23       24.21
+{txt}       Estonia {c |}{res}         31        2.08       26.29
+{txt}       Finland {c |}{res}         63        4.23       30.52
+{txt}       Germany {c |}{res}         33        2.21       32.73
+{txt}        Greece {c |}{res}         63        4.23       36.96
+{txt}       Hungary {c |}{res}         33        2.21       39.17
+{txt}       Iceland {c |}{res}         63        4.23       43.39
+{txt}         India {c |}{res}         63        4.23       47.62
+{txt}       Ireland {c |}{res}         63        4.23       51.84
+{txt}         Italy {c |}{res}         63        4.23       56.07
+{txt}        Latvia {c |}{res}         30        2.01       58.08
+{txt}      Lithunia {c |}{res}         31        2.08       60.16
+{txt}    Luxembourg {c |}{res}         63        4.23       64.39
+{txt}         Malta {c |}{res}         63        4.23       68.61
+{txt}   Netherlands {c |}{res}         63        4.23       72.84
+{txt}        Norway {c |}{res}         63        4.23       77.06
+{txt}        Poland {c |}{res}         32        2.15       79.21
+{txt}        Serbia {c |}{res}         15        1.01       80.21
+{txt}      Slovakia {c |}{res}         29        1.95       82.16
+{txt}      Slovenia {c |}{res}         31        2.08       84.24
+{txt}         Spain {c |}{res}         46        3.09       87.32
+{txt}        Sweden {c |}{res}         63        4.23       91.55
+{txt}   Switzerland {c |}{res}         63        4.23       95.77
+{txt}United Kingdom {c |}{res}         63        4.23      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}      1,491      100.00
+
+{com}. xtreg lnnewgcapf_usd cen lnnew_gsav_usd lnnewgnexp_usd cdum1-cdum30, fe
+{p 0 6 2}{txt}note: cdum1 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum2 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum3 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum4 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum5 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum6 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum7 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum8 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum9 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum10 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum11 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum12 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum13 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum14 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum15 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum16 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum17 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum18 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum19 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum20 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum21 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum22 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum23 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum24 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum25 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum26 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum27 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum28 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum29 omitted because of collinearity{p_end}
+{p 0 6 2}note: cdum30 omitted because of collinearity{p_end}
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,318
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9462{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9945{col 63}{txt}avg{col 67}={col 69}{res}      42.5
+{txt}     overall = {res}0.9814{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}3{txt},{res}1284{txt}){col 67}={col 70}{res}  7522.96
+{txt}corr(u_i, Xb){col 16}= {res}0.1424{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf_usd{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      t{col 48}   P>|t|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 11}cen {c |}{col 16}{res}{space 2}-.1121955{col 28}{space 2} .0941341{col 39}{space 1}   -1.19{col 48}{space 3}0.234{col 56}{space 4} -.296869{col 69}{space 3}  .072478
+{txt}lnnew_gsav_usd {c |}{col 16}{res}{space 2} .0854755{col 28}{space 2} .0108388{col 39}{space 1}    7.89{col 48}{space 3}0.000{col 56}{space 4} .0642119{col 69}{space 3} .1067392
+{txt}lnnewgnexp_usd {c |}{col 16}{res}{space 2} .9114425{col 28}{space 2} .0099159{col 39}{space 1}   91.92{col 48}{space 3}0.000{col 56}{space 4} .8919894{col 69}{space 3} .9308955
+{txt}{space 9}cdum1 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum2 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum3 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum4 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum5 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum6 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum7 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum8 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}cdum9 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum10 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum11 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum12 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum13 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum14 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum15 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum16 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum17 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum18 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum19 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum20 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum21 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum22 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum23 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum24 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum25 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum26 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum27 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum28 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum29 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 8}cdum30 {c |}{col 16}{res}{space 2}        0{col 28}{txt}  (omitted)
+{space 9}_cons {c |}{col 16}{res}{space 2}-1.190628{col 28}{space 2} .1928537{col 39}{space 1}   -6.17{col 48}{space 3}0.000{col 56}{space 4}-1.568971{col 69}{space 3}-.8122848
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res} .12154765
+       {txt}sigma_e {c |} {res} .24223314
+           {txt}rho {c |} {res} .20113935{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1284{txt}) = {res}8.71{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg lnnewgcapf_usd cen lnnew_gsav_usd lnnewgnexp_usd cdum1-cdum30, re
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,318
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.9462                                         {txt}min = {res}        15
+{txt}     between = {res}1.0000                                         {txt}avg = {res}      42.5
+{txt}     overall = {res}0.9847                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}33{txt})     =  {res} 82577.59
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf_usd{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      z{col 48}   P>|z|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 11}cen {c |}{col 16}{res}{space 2}-.1121955{col 28}{space 2} .0941341{col 39}{space 1}   -1.19{col 48}{space 3}0.233{col 56}{space 4}-.2966949{col 69}{space 3} .0723039
+{txt}lnnew_gsav_usd {c |}{col 16}{res}{space 2} .0854755{col 28}{space 2} .0108388{col 39}{space 1}    7.89{col 48}{space 3}0.000{col 56}{space 4} .0642319{col 69}{space 3} .1067191
+{txt}lnnewgnexp_usd {c |}{col 16}{res}{space 2} .9114425{col 28}{space 2} .0099159{col 39}{space 1}   91.92{col 48}{space 3}0.000{col 56}{space 4} .8920078{col 69}{space 3} .9308772
+{txt}{space 9}cdum1 {c |}{col 16}{res}{space 2} .0638941{col 28}{space 2} .0643593{col 39}{space 1}    0.99{col 48}{space 3}0.321{col 56}{space 4}-.0622477{col 69}{space 3}  .190036
+{txt}{space 9}cdum2 {c |}{col 16}{res}{space 2} .1822819{col 28}{space 2} .0589115{col 39}{space 1}    3.09{col 48}{space 3}0.002{col 56}{space 4} .0668174{col 69}{space 3} .2977464
+{txt}{space 9}cdum3 {c |}{col 16}{res}{space 2}-.0047978{col 28}{space 2} .0527272{col 39}{space 1}   -0.09{col 48}{space 3}0.927{col 56}{space 4}-.1081413{col 69}{space 3} .0985457
+{txt}{space 9}cdum4 {c |}{col 16}{res}{space 2} .1117233{col 28}{space 2} .0676722{col 39}{space 1}    1.65{col 48}{space 3}0.099{col 56}{space 4}-.0209117{col 69}{space 3} .2443582
+{txt}{space 9}cdum5 {c |}{col 16}{res}{space 2}-.1013517{col 28}{space 2} .0599857{col 39}{space 1}   -1.69{col 48}{space 3}0.091{col 56}{space 4}-.2189216{col 69}{space 3} .0162182
+{txt}{space 9}cdum6 {c |}{col 16}{res}{space 2}-.0067792{col 28}{space 2} .0596604{col 39}{space 1}   -0.11{col 48}{space 3}0.910{col 56}{space 4}-.1237116{col 69}{space 3} .1101531
+{txt}{space 9}cdum7 {c |}{col 16}{res}{space 2} .3214226{col 28}{space 2} .0610027{col 39}{space 1}    5.27{col 48}{space 3}0.000{col 56}{space 4} .2018594{col 69}{space 3} .4409857
+{txt}{space 9}cdum8 {c |}{col 16}{res}{space 2} .0582574{col 28}{space 2} .0522212{col 39}{space 1}    1.12{col 48}{space 3}0.265{col 56}{space 4}-.0440942{col 69}{space 3} .1606091
+{txt}{space 9}cdum9 {c |}{col 16}{res}{space 2} .2656483{col 28}{space 2} .0666475{col 39}{space 1}    3.99{col 48}{space 3}0.000{col 56}{space 4} .1350216{col 69}{space 3}  .396275
+{txt}{space 8}cdum10 {c |}{col 16}{res}{space 2} .1554784{col 28}{space 2} .0554482{col 39}{space 1}    2.80{col 48}{space 3}0.005{col 56}{space 4}  .046802{col 69}{space 3} .2641549
+{txt}{space 8}cdum11 {c |}{col 16}{res}{space 2} .0731883{col 28}{space 2} .0547587{col 39}{space 1}    1.34{col 48}{space 3}0.181{col 56}{space 4}-.0341368{col 69}{space 3} .1805134
+{txt}{space 8}cdum12 {c |}{col 16}{res}{space 2}-.0257496{col 28}{space 2} .0469779{col 39}{space 1}   -0.55{col 48}{space 3}0.584{col 56}{space 4}-.1178247{col 69}{space 3} .0663255
+{txt}{space 8}cdum13 {c |}{col 16}{res}{space 2} .1800326{col 28}{space 2} .0553262{col 39}{space 1}    3.25{col 48}{space 3}0.001{col 56}{space 4} .0715952{col 69}{space 3} .2884701
+{txt}{space 8}cdum14 {c |}{col 16}{res}{space 2} .0924616{col 28}{space 2} .0630089{col 39}{space 1}    1.47{col 48}{space 3}0.142{col 56}{space 4}-.0310335{col 69}{space 3} .2159567
+{txt}{space 8}cdum15 {c |}{col 16}{res}{space 2} .2446228{col 28}{space 2} .0465366{col 39}{space 1}    5.26{col 48}{space 3}0.000{col 56}{space 4} .1534126{col 69}{space 3} .3358329
+{txt}{space 8}cdum16 {c |}{col 16}{res}{space 2} .3742028{col 28}{space 2} .0586643{col 39}{space 1}    6.38{col 48}{space 3}0.000{col 56}{space 4}  .259223{col 69}{space 3} .4891827
+{txt}{space 8}cdum17 {c |}{col 16}{res}{space 2} .1925915{col 28}{space 2} .0447454{col 39}{space 1}    4.30{col 48}{space 3}0.000{col 56}{space 4} .1048922{col 69}{space 3} .2802908
+{txt}{space 8}cdum18 {c |}{col 16}{res}{space 2} .0496424{col 28}{space 2} .0692623{col 39}{space 1}    0.72{col 48}{space 3}0.474{col 56}{space 4}-.0861091{col 69}{space 3} .1853939
+{txt}{space 8}cdum19 {c |}{col 16}{res}{space 2}-.0044777{col 28}{space 2} .0632093{col 39}{space 1}   -0.07{col 48}{space 3}0.944{col 56}{space 4}-.1283657{col 69}{space 3} .1194103
+{txt}{space 8}cdum20 {c |}{col 16}{res}{space 2}-.0323911{col 28}{space 2} .0573914{col 39}{space 1}   -0.56{col 48}{space 3}0.572{col 56}{space 4}-.1448761{col 69}{space 3} .0800939
+{txt}{space 8}cdum21 {c |}{col 16}{res}{space 2} .1408323{col 28}{space 2} .0612714{col 39}{space 1}    2.30{col 48}{space 3}0.022{col 56}{space 4} .0207425{col 69}{space 3} .2609222
+{txt}{space 8}cdum22 {c |}{col 16}{res}{space 2}  .068114{col 28}{space 2} .0517016{col 39}{space 1}    1.32{col 48}{space 3}0.188{col 56}{space 4}-.0332193{col 69}{space 3} .1694474
+{txt}{space 8}cdum23 {c |}{col 16}{res}{space 2} .2492781{col 28}{space 2} .0495981{col 39}{space 1}    5.03{col 48}{space 3}0.000{col 56}{space 4} .1520677{col 69}{space 3} .3464885
+{txt}{space 8}cdum24 {c |}{col 16}{res}{space 2}-.0877618{col 28}{space 2} .0549323{col 39}{space 1}   -1.60{col 48}{space 3}0.110{col 56}{space 4} -.195427{col 69}{space 3} .0199035
+{txt}{space 8}cdum25 {c |}{col 16}{res}{space 2}-.0717764{col 28}{space 2} .0735076{col 39}{space 1}   -0.98{col 48}{space 3}0.329{col 56}{space 4}-.2158487{col 69}{space 3} .0722959
+{txt}{space 8}cdum26 {c |}{col 16}{res}{space 2} .1655154{col 28}{space 2} .0612666{col 39}{space 1}    2.70{col 48}{space 3}0.007{col 56}{space 4} .0454351{col 69}{space 3} .2855958
+{txt}{space 8}cdum27 {c |}{col 16}{res}{space 2} .1133086{col 28}{space 2} .0631603{col 39}{space 1}    1.79{col 48}{space 3}0.073{col 56}{space 4}-.0104834{col 69}{space 3} .2371006
+{txt}{space 8}cdum28 {c |}{col 16}{res}{space 2} .0995634{col 28}{space 2}  .048023{col 39}{space 1}    2.07{col 48}{space 3}0.038{col 56}{space 4}   .00544{col 69}{space 3} .1936869
+{txt}{space 8}cdum29 {c |}{col 16}{res}{space 2}  .206199{col 28}{space 2} .0471974{col 39}{space 1}    4.37{col 48}{space 3}0.000{col 56}{space 4} .1136938{col 69}{space 3} .2987042
+{txt}{space 8}cdum30 {c |}{col 16}{res}{space 2} .2343582{col 28}{space 2} .0546001{col 39}{space 1}    4.29{col 48}{space 3}0.000{col 56}{space 4}  .127344{col 69}{space 3} .3413725
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2} -1.29993{col 28}{space 2} .2140473{col 39}{space 1}   -6.07{col 48}{space 3}0.000{col 56}{space 4}-1.719455{col 69}{space 3}-.8804047
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res}         0
+       {txt}sigma_e {c |} {res} .24223314
+           {txt}rho {c |} {res}         0{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+
+{com}. su cen
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 9}cen {c |}{res}      1,491     .418438    .1382696       .135       .978
+
+{com}. histogram cen
+{txt}(bin={res}31{txt}, start={res}.135{txt}, width={res}.02719355{txt})
+{res}
+{com}. su lnnewgcapf_usd cen lnnew_gsav_usd
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+lnnewgcapf~d {c |}{res}      1,453    23.66417    1.945449   15.01373   27.68984
+{txt}{space 9}cen {c |}{res}      1,491     .418438    .1382696       .135       .978
+{txt}lnnew_gsav~d {c |}{res}      1,342    23.93918    1.918342   17.85363   27.90817
+
+{com}. histogram lnnew_gsav_usd
+{txt}(bin={res}31{txt}, start={res}17.853632{txt}, width={res}.3243399{txt})
+{res}
+{com}. twoway (scatter lnnewgcapf_usd lnnew_gsav_usd)
+{res}
+{com}. twoway (scatter lnnewgcapf_usd lnnew_gsav_usd)
+{res}
+{com}. twoway (scatter lnnewgcapf_usd cen)
+{res}
+{com}. 
+. twoway (scatter lnnew_gsav_usd cen)
+{res}
+{com}. twoway (scatter lngnexp_usd cen)
+{err}variable {bf}lngnexp_usd{sf} not found
+{txt}{search r(111):r(111);}
+
+{com}. 
+. . twoway (scatter lnnewgnexp_usd cen)
+{res}
+{com}.  
+. xtreg cen cdum1-cdum30 time
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,491
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.1141                                         {txt}min = {res}        15
+{txt}     between = {res}1.0000                                         {txt}avg = {res}      48.1
+{txt}     overall = {res}0.7333                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}31{txt})     =  {res}  4012.40
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         cen{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}cdum1 {c |}{col 14}{res}{space 2} .0186207{col 26}{space 2} .0157676{col 37}{space 1}    1.18{col 46}{space 3}0.238{col 54}{space 4}-.0122832{col 67}{space 3} .0495246
+{txt}{space 7}cdum2 {c |}{col 14}{res}{space 2}-.1225556{col 26}{space 2} .0128563{col 37}{space 1}   -9.53{col 46}{space 3}0.000{col 54}{space 4}-.1477534{col 67}{space 3}-.0973577
+{txt}{space 7}cdum3 {c |}{col 14}{res}{space 2} .2261057{col 26}{space 2} .0136875{col 37}{space 1}   16.52{col 46}{space 3}0.000{col 54}{space 4} .1992788{col 67}{space 3} .2529327
+{txt}{space 7}cdum4 {c |}{col 14}{res}{space 2}-.3122698{col 26}{space 2} .0128563{col 37}{space 1}  -24.29{col 46}{space 3}0.000{col 54}{space 4}-.3374677{col 67}{space 3} -.287072
+{txt}{space 7}cdum5 {c |}{col 14}{res}{space 2}-.0848793{col 26}{space 2} .0157676{col 37}{space 1}   -5.38{col 46}{space 3}0.000{col 54}{space 4}-.1157832{col 67}{space 3}-.0539754
+{txt}{space 7}cdum6 {c |}{col 14}{res}{space 2} -.037284{col 26}{space 2} .0159399{col 37}{space 1}   -2.34{col 46}{space 3}0.019{col 54}{space 4}-.0685256{col 67}{space 3}-.0060424
+{txt}{space 7}cdum7 {c |}{col 14}{res}{space 2}-.1770914{col 26}{space 2} .0167299{col 37}{space 1}  -10.59{col 46}{space 3}0.000{col 54}{space 4}-.2098814{col 67}{space 3}-.1443015
+{txt}{space 7}cdum8 {c |}{col 14}{res}{space 2}-.2160476{col 26}{space 2} .0128563{col 37}{space 1}  -16.80{col 46}{space 3}0.000{col 54}{space 4}-.2412455{col 67}{space 3}-.1908498
+{txt}{space 7}cdum9 {c |}{col 14}{res}{space 2}-.2094775{col 26}{space 2} .0159399{col 37}{space 1}  -13.14{col 46}{space 3}0.000{col 54}{space 4}-.2407191{col 67}{space 3}-.1782359
+{txt}{space 6}cdum10 {c |}{col 14}{res}{space 2}-.2877143{col 26}{space 2} .0128563{col 37}{space 1}  -22.38{col 46}{space 3}0.000{col 54}{space 4}-.3129121{col 67}{space 3}-.2625164
+{txt}{space 6}cdum11 {c |}{col 14}{res}{space 2}-.1131233{col 26}{space 2} .0156038{col 37}{space 1}   -7.25{col 46}{space 3}0.000{col 54}{space 4}-.1437062{col 67}{space 3}-.0825404
+{txt}{space 6}cdum12 {c |}{col 14}{res}{space 2}-.0046508{col 26}{space 2} .0128563{col 37}{space 1}   -0.36{col 46}{space 3}0.718{col 54}{space 4}-.0298486{col 67}{space 3} .0205471
+{txt}{space 6}cdum13 {c |}{col 14}{res}{space 2} .0208767{col 26}{space 2} .0156038{col 37}{space 1}    1.34{col 46}{space 3}0.181{col 54}{space 4}-.0097062{col 67}{space 3} .0514596
+{txt}{space 6}cdum14 {c |}{col 14}{res}{space 2}-.1916032{col 26}{space 2} .0128563{col 37}{space 1}  -14.90{col 46}{space 3}0.000{col 54}{space 4} -.216801{col 67}{space 3}-.1664053
+{txt}{space 6}cdum15 {c |}{col 14}{res}{space 2}-.0229048{col 26}{space 2} .0128563{col 37}{space 1}   -1.78{col 46}{space 3}0.075{col 54}{space 4}-.0481026{col 67}{space 3} .0022931
+{txt}{space 6}cdum16 {c |}{col 14}{res}{space 2}-.0931429{col 26}{space 2} .0128563{col 37}{space 1}   -7.24{col 46}{space 3}0.000{col 54}{space 4}-.1183407{col 67}{space 3} -.067945
+{txt}{space 6}cdum17 {c |}{col 14}{res}{space 2}-.0961587{col 26}{space 2} .0128563{col 37}{space 1}   -7.48{col 46}{space 3}0.000{col 54}{space 4}-.1213566{col 67}{space 3}-.0709609
+{txt}{space 6}cdum18 {c |}{col 14}{res}{space 2} -.271269{col 26}{space 2} .0161214{col 37}{space 1}  -16.83{col 46}{space 3}0.000{col 54}{space 4}-.3028664{col 67}{space 3}-.2396716
+{txt}{space 6}cdum19 {c |}{col 14}{res}{space 2}-.1516711{col 26}{space 2} .0159399{col 37}{space 1}   -9.52{col 46}{space 3}0.000{col 54}{space 4}-.1829127{col 67}{space 3}-.1204295
+{txt}{space 6}cdum20 {c |}{col 14}{res}{space 2}    -.177{col 26}{space 2} .0128563{col 37}{space 1}  -13.77{col 46}{space 3}0.000{col 54}{space 4}-.2021979{col 67}{space 3}-.1518021
+{txt}{space 6}cdum21 {c |}{col 14}{res}{space 2} -.021127{col 26}{space 2} .0128563{col 37}{space 1}   -1.64{col 46}{space 3}0.100{col 54}{space 4}-.0463248{col 67}{space 3} .0040709
+{txt}{space 6}cdum22 {c |}{col 14}{res}{space 2} -.255873{col 26}{space 2} .0128563{col 37}{space 1}  -19.90{col 46}{space 3}0.000{col 54}{space 4}-.2810709{col 67}{space 3}-.2306752
+{txt}{space 6}cdum23 {c |}{col 14}{res}{space 2}-.1502063{col 26}{space 2} .0128563{col 37}{space 1}  -11.68{col 46}{space 3}0.000{col 54}{space 4}-.1754042{col 67}{space 3}-.1250085
+{txt}{space 6}cdum24 {c |}{col 14}{res}{space 2}-.0954105{col 26}{space 2} .0157676{col 37}{space 1}   -6.05{col 46}{space 3}0.000{col 54}{space 4}-.1263144{col 67}{space 3}-.0645066
+{txt}{space 6}cdum25 {c |}{col 14}{res}{space 2}-.0079367{col 26}{space 2} .0209186{col 37}{space 1}   -0.38{col 46}{space 3}0.704{col 54}{space 4}-.0489364{col 67}{space 3} .0330629
+{txt}{space 6}cdum26 {c |}{col 14}{res}{space 2}-.1619978{col 26}{space 2}  .016313{col 37}{space 1}   -9.93{col 46}{space 3}0.000{col 54}{space 4}-.1939706{col 67}{space 3} -.130025
+{txt}{space 6}cdum27 {c |}{col 14}{res}{space 2}-.2036066{col 26}{space 2} .0159399{col 37}{space 1}  -12.77{col 46}{space 3}0.000{col 54}{space 4}-.2348482{col 67}{space 3} -.172365
+{txt}{space 6}cdum28 {c |}{col 14}{res}{space 2}-.0617128{col 26}{space 2} .0140289{col 37}{space 1}   -4.40{col 46}{space 3}0.000{col 54}{space 4}-.0892089{col 67}{space 3}-.0342167
+{txt}{space 6}cdum29 {c |}{col 14}{res}{space 2}-.1347143{col 26}{space 2} .0128563{col 37}{space 1}  -10.48{col 46}{space 3}0.000{col 54}{space 4}-.1599121{col 67}{space 3}-.1095164
+{txt}{space 6}cdum30 {c |}{col 14}{res}{space 2}-.2836667{col 26}{space 2} .0128563{col 37}{space 1}  -22.06{col 46}{space 3}0.000{col 54}{space 4}-.3088645{col 67}{space 3}-.2584688
+{txt}{space 8}time {c |}{col 14}{res}{space 2}-.0015999{col 26}{space 2} .0001167{col 37}{space 1}  -13.71{col 46}{space 3}0.000{col 54}{space 4}-.0018286{col 67}{space 3}-.0013711
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  3.73565{col 26}{space 2} .2325823{col 37}{space 1}   16.06{col 46}{space 3}0.000{col 54}{space 4} 3.279798{col 67}{space 3} 4.191503
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+     sigma_u {c |} {res}         0
+     {txt}sigma_e {c |} {res} .07215571
+         {txt}rho {c |} {res}         0{txt}   (fraction of variance due to u_i)
+{hline 13}{c BT}{hline 64}
+
+{com}. predict cenhat
+{txt}(option xb assumed; fitted values)
+
+{com}. xtreg lnnewgcapf_usd cenhat lnnew_gsav_usd lnnewgnexp_usd, re
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,318
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.9461                                         {txt}min = {res}        15
+{txt}     between = {res}0.9944                                         {txt}avg = {res}      42.5
+{txt}     overall = {res}0.9813                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}3{txt})      =  {res} 27698.13
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf_usd{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      z{col 48}   P>|z|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}cenhat {c |}{col 16}{res}{space 2}-.0753734{col 28}{space 2} .1819918{col 39}{space 1}   -0.41{col 48}{space 3}0.679{col 56}{space 4}-.4320708{col 69}{space 3}  .281324
+{txt}lnnew_gsav_usd {c |}{col 16}{res}{space 2} .0901234{col 28}{space 2} .0102346{col 39}{space 1}    8.81{col 48}{space 3}0.000{col 56}{space 4} .0700639{col 69}{space 3} .1101829
+{txt}lnnewgnexp_usd {c |}{col 16}{res}{space 2} .9100139{col 28}{space 2} .0100608{col 39}{space 1}   90.45{col 48}{space 3}0.000{col 56}{space 4} .8902951{col 69}{space 3} .9297327
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2}-1.282392{col 28}{space 2} .2231176{col 39}{space 1}   -5.75{col 48}{space 3}0.000{col 56}{space 4}-1.719694{col 69}{space 3}-.8450891
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res} .11509152
+       {txt}sigma_e {c |} {res} .23922519
+           {txt}rho {c |} {res} .18795466{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+
+{com}. drop cenhat
+
+. xtreg cen lnnew_gnexp_usd cdum1-cdum30
+{err}variable {bf}lnnew_gnexp_usd{sf} not found
+{txt}{search r(111):r(111);}
+
+{com}. xtreg cen lnnewgnexp_usd cdum1-cdum30
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,453
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.0881                                         {txt}min = {res}        15
+{txt}     between = {res}1.0000                                         {txt}avg = {res}      46.9
+{txt}     overall = {res}0.7280                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}31{txt})     =  {res}  3803.86
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           cen{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      z{col 48}   P>|z|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+lnnewgnexp_usd {c |}{col 16}{res}{space 2}-.0191046{col 28}{space 2} .0016304{col 39}{space 1}  -11.72{col 48}{space 3}0.000{col 56}{space 4}-.0223002{col 69}{space 3} -.015909
+{txt}{space 9}cdum1 {c |}{col 16}{res}{space 2}-.0928497{col 28}{space 2} .0177371{col 39}{space 1}   -5.23{col 48}{space 3}0.000{col 56}{space 4}-.1276138{col 69}{space 3}-.0580856
+{txt}{space 9}cdum2 {c |}{col 16}{res}{space 2}-.1629464{col 28}{space 2} .0138395{col 39}{space 1}  -11.77{col 48}{space 3}0.000{col 56}{space 4}-.1900714{col 69}{space 3}-.1358214
+{txt}{space 9}cdum3 {c |}{col 16}{res}{space 2} .1661887{col 28}{space 2}   .01471{col 39}{space 1}   11.30{col 48}{space 3}0.000{col 56}{space 4} .1373576{col 69}{space 3} .1950199
+{txt}{space 9}cdum4 {c |}{col 16}{res}{space 2} -.351575{col 28}{space 2} .0136514{col 39}{space 1}  -25.75{col 48}{space 3}0.000{col 56}{space 4}-.3783313{col 69}{space 3}-.3248188
+{txt}{space 9}cdum5 {c |}{col 16}{res}{space 2}-.1700714{col 28}{space 2} .0169088{col 39}{space 1}  -10.06{col 48}{space 3}0.000{col 56}{space 4}-.2032121{col 69}{space 3}-.1369306
+{txt}{space 9}cdum6 {c |}{col 16}{res}{space 2}-.1170113{col 28}{space 2}  .016911{col 39}{space 1}   -6.92{col 48}{space 3}0.000{col 56}{space 4}-.1501563{col 69}{space 3}-.0838664
+{txt}{space 9}cdum7 {c |}{col 16}{res}{space 2} -.236586{col 28}{space 2} .0172265{col 39}{space 1}  -13.73{col 48}{space 3}0.000{col 56}{space 4}-.2703494{col 69}{space 3}-.2028226
+{txt}{space 9}cdum8 {c |}{col 16}{res}{space 2}-.2567509{col 28}{space 2} .0137179{col 39}{space 1}  -18.72{col 48}{space 3}0.000{col 56}{space 4}-.2836376{col 69}{space 3}-.2298642
+{txt}{space 9}cdum9 {c |}{col 16}{res}{space 2}-.3112518{col 28}{space 2} .0175319{col 39}{space 1}  -17.75{col 48}{space 3}0.000{col 56}{space 4}-.3456136{col 69}{space 3}-.2768899
+{txt}{space 8}cdum10 {c |}{col 16}{res}{space 2}-.3338889{col 28}{space 2} .0139025{col 39}{space 1}  -24.02{col 48}{space 3}0.000{col 56}{space 4}-.3611372{col 69}{space 3}-.3066405
+{txt}{space 8}cdum11 {c |}{col 16}{res}{space 2}-.1117719{col 28}{space 2} .0160354{col 39}{space 1}   -6.97{col 48}{space 3}0.000{col 56}{space 4}-.1432006{col 69}{space 3}-.0803432
+{txt}{space 8}cdum12 {c |}{col 16}{res}{space 2}-.0487496{col 28}{space 2} .0137967{col 39}{space 1}   -3.53{col 48}{space 3}0.000{col 56}{space 4}-.0757907{col 69}{space 3}-.0217084
+{txt}{space 8}cdum13 {c |}{col 16}{res}{space 2}-.0437975{col 28}{space 2} .0163059{col 39}{space 1}   -2.69{col 48}{space 3}0.007{col 56}{space 4}-.0757564{col 69}{space 3}-.0118385
+{txt}{space 8}cdum14 {c |}{col 16}{res}{space 2} -.289243{col 28}{space 2} .0158554{col 39}{space 1}  -18.24{col 48}{space 3}0.000{col 56}{space 4} -.320319{col 69}{space 3}-.2581671
+{txt}{space 8}cdum15 {c |}{col 16}{res}{space 2}-.0372496{col 28}{space 2} .0133065{col 39}{space 1}   -2.80{col 48}{space 3}0.005{col 56}{space 4}  -.06333{col 69}{space 3}-.0111693
+{txt}{space 8}cdum16 {c |}{col 16}{res}{space 2}-.1499454{col 28}{space 2} .0142652{col 39}{space 1}  -10.51{col 48}{space 3}0.000{col 56}{space 4}-.1779047{col 69}{space 3} -.121986
+{txt}{space 8}cdum17 {c |}{col 16}{res}{space 2}-.1014086{col 28}{space 2} .0132505{col 39}{space 1}   -7.65{col 48}{space 3}0.000{col 56}{space 4}-.1273791{col 69}{space 3}-.0754381
+{txt}{space 8}cdum18 {c |}{col 16}{res}{space 2} -.368216{col 28}{space 2} .0175222{col 39}{space 1}  -21.01{col 48}{space 3}0.000{col 56}{space 4}-.4025588{col 69}{space 3}-.3338731
+{txt}{space 8}cdum19 {c |}{col 16}{res}{space 2}-.2412975{col 28}{space 2} .0171671{col 39}{space 1}  -14.06{col 48}{space 3}0.000{col 56}{space 4}-.2749443{col 69}{space 3}-.2076506
+{txt}{space 8}cdum20 {c |}{col 16}{res}{space 2}-.2631244{col 28}{space 2} .0153057{col 39}{space 1}  -17.19{col 48}{space 3}0.000{col 56}{space 4}-.2931229{col 69}{space 3}-.2331258
+{txt}{space 8}cdum21 {c |}{col 16}{res}{space 2}-.1328911{col 28}{space 2} .0163884{col 39}{space 1}   -8.11{col 48}{space 3}0.000{col 56}{space 4}-.1650117{col 69}{space 3}-.1007705
+{txt}{space 8}cdum22 {c |}{col 16}{res}{space 2}-.2809359{col 28}{space 2}  .013519{col 39}{space 1}  -20.78{col 48}{space 3}0.000{col 56}{space 4}-.3074326{col 69}{space 3}-.2544391
+{txt}{space 8}cdum23 {c |}{col 16}{res}{space 2}-.1969378{col 28}{space 2} .0139117{col 39}{space 1}  -14.16{col 48}{space 3}0.000{col 56}{space 4}-.2242042{col 69}{space 3}-.1696713
+{txt}{space 8}cdum24 {c |}{col 16}{res}{space 2}-.1378619{col 28}{space 2} .0161468{col 39}{space 1}   -8.54{col 48}{space 3}0.000{col 56}{space 4}-.1695091{col 69}{space 3}-.1062146
+{txt}{space 8}cdum25 {c |}{col 16}{res}{space 2}-.0964077{col 28}{space 2} .0216364{col 39}{space 1}   -4.46{col 48}{space 3}0.000{col 56}{space 4}-.1388143{col 69}{space 3}-.0540011
+{txt}{space 8}cdum26 {c |}{col 16}{res}{space 2} -.236035{col 28}{space 2} .0171012{col 39}{space 1}  -13.80{col 48}{space 3}0.000{col 56}{space 4}-.2695527{col 69}{space 3}-.2025173
+{txt}{space 8}cdum27 {c |}{col 16}{res}{space 2} -.288199{col 28}{space 2} .0170321{col 39}{space 1}  -16.92{col 48}{space 3}0.000{col 56}{space 4}-.3215813{col 69}{space 3}-.2548167
+{txt}{space 8}cdum28 {c |}{col 16}{res}{space 2}-.0778475{col 28}{space 2} .0143861{col 39}{space 1}   -5.41{col 48}{space 3}0.000{col 56}{space 4}-.1060436{col 69}{space 3}-.0496513
+{txt}{space 8}cdum29 {c |}{col 16}{res}{space 2}-.1638732{col 28}{space 2} .0134932{col 39}{space 1}  -12.14{col 48}{space 3}0.000{col 56}{space 4}-.1903194{col 69}{space 3} -.137427
+{txt}{space 8}cdum30 {c |}{col 16}{res}{space 2}-.3090437{col 28}{space 2} .0137716{col 39}{space 1}  -22.44{col 48}{space 3}0.000{col 56}{space 4}-.3360356{col 69}{space 3}-.2820519
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2} 1.072316{col 28}{space 2} .0456637{col 39}{space 1}   23.48{col 48}{space 3}0.000{col 56}{space 4} .9828171{col 69}{space 3} 1.161816
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res}         0
+       {txt}sigma_e {c |} {res} .07338763
+           {txt}rho {c |} {res}         0{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+
+{com}. predict cenhat
+{txt}(option xb assumed; fitted values)
+(38 missing values generated)
+
+{com}. xtreg lnnewgcapf_usd cenhat lnnew_gsav_usd
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,318
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.9131                                         {txt}min = {res}        15
+{txt}     between = {res}0.0328                                         {txt}avg = {res}      42.5
+{txt}     overall = {res}0.0653                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}2{txt})      =  {res}  6270.08
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf_usd{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      z{col 48}   P>|z|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}cenhat {c |}{col 16}{res}{space 2}-31.67548{col 28}{space 2}  .757731{col 39}{space 1}  -41.80{col 48}{space 3}0.000{col 56}{space 4} -33.1606{col 69}{space 3}-30.19035
+{txt}lnnew_gsav_usd {c |}{col 16}{res}{space 2} .3464857{col 28}{space 2} .0170975{col 39}{space 1}   20.27{col 48}{space 3}0.000{col 56}{space 4} .3129752{col 69}{space 3} .3799963
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2} 28.66443{col 28}{space 2}  .681229{col 39}{space 1}   42.08{col 48}{space 3}0.000{col 56}{space 4} 27.32925{col 69}{space 3} 29.99962
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res} .47168417
+       {txt}sigma_e {c |} {res} .24227278
+           {txt}rho {c |} {res} .79125233{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+
+{com}. xtreg lnnewgcapf_usd cenhat lnnew_gsav_usd,fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,318
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9461{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.0035{col 63}{txt}avg{col 67}={col 69}{res}      42.5
+{txt}     overall = {res}0.0170{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}2{txt},{res}1285{txt}){col 67}={col 70}{res} 11280.03
+{txt}corr(u_i, Xb){col 16}= {res}-0.9431{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf_usd{col 16}{c |}      Coef.{col 28}   Std. Err.{col 40}      t{col 48}   P>|t|{col 56}     [95% Con{col 69}f. Interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}cenhat {c |}{col 16}{res}{space 2}-47.71804{col 28}{space 2} .5190461{col 39}{space 1}  -91.93{col 48}{space 3}0.000{col 56}{space 4}-48.73631{col 69}{space 3}-46.69976
+{txt}lnnew_gsav_usd {c |}{col 16}{res}{space 2} .0871121{col 28}{space 2} .0107532{col 39}{space 1}    8.10{col 48}{space 3}0.000{col 56}{space 4} .0660163{col 69}{space 3} .1082078
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2} 41.67114{col 28}{space 2}  .445091{col 39}{space 1}   93.62{col 48}{space 3}0.000{col 56}{space 4} 40.79796{col 69}{space 3} 42.54433
+{txt}{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+       sigma_u {c |} {res} 5.6929793
+       {txt}sigma_e {c |} {res} .24227278
+           {txt}rho {c |} {res} .99819223{txt}   (fraction of variance due to u_i)
+{hline 15}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1285{txt}) = {res}480.09{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg lnnewgcapf_usd cenhat lnnew_gsav_usd lnnewnet_fdi_usd lnnewrevenue_percgdp,fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       508
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        24
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9803{col 63}{txt}min{col 67}={col 69}{res}         1
+{txt}     between = {res}0.0558{col 63}{txt}avg{col 67}={col 69}{res}      21.2
+{txt}     overall = {res}0.0001{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}4{txt},{res}480{txt}){col 67}={col 70}{res}  5965.20
+{txt}corr(u_i, Xb){col 16}= {res}-0.9470{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnnewgcapf_usd{col 22}{c |}      Coef.{col 34}   Std. Err.{col 46}      t{col 54}   P>|t|{col 62}     [95% Con{col 75}f. Interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 14}cenhat {c |}{col 22}{res}{space 2}-48.16143{col 34}{space 2} .6266887{col 45}{space 1}  -76.85{col 54}{space 3}0.000{col 62}{space 4}-49.39283{col 75}{space 3}-46.93004
+{txt}{space 6}lnnew_gsav_usd {c |}{col 22}{res}{space 2} .0676283{col 34}{space 2} .0125895{col 45}{space 1}    5.37{col 54}{space 3}0.000{col 62}{space 4} .0428909{col 75}{space 3} .0923657
+{txt}{space 4}lnnewnet_fdi_usd {c |}{col 22}{res}{space 2}-.0114509{col 34}{space 2} .0049303{col 45}{space 1}   -2.32{col 54}{space 3}0.021{col 62}{space 4}-.0211386{col 75}{space 3}-.0017632
+{txt}lnnewrevenue_percgdp {c |}{col 22}{res}{space 2}-.0910755{col 34}{space 2} .0544958{col 45}{space 1}   -1.67{col 54}{space 3}0.095{col 62}{space 4}-.1981554{col 75}{space 3} .0160043
+{txt}{space 15}_cons {c |}{col 22}{res}{space 2} 42.03441{col 34}{space 2} .6088643{col 45}{space 1}   69.04{col 54}{space 3}0.000{col 62}{space 4} 40.83805{col 75}{space 3} 43.23078
+{txt}{hline 21}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+             sigma_u {c |} {res} 5.8791904
+             {txt}sigma_e {c |} {res} .12696236
+                 {txt}rho {c |} {res} .99953386{txt}   (fraction of variance due to u_i)
+{hline 21}{c BT}{hline 64}
+F test that all u_i=0: F({res}23{txt}, {res}480{txt}) = {res}615.16{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.  xtreg lnnewgcapf_usd cenhat lnnew_gsav_usd lnnewnet_fdi_usd,fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       508
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        24
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9802{col 63}{txt}min{col 67}={col 69}{res}         1
+{txt}     between = {res}0.0565{col 63}{txt}avg{col 67}={col 69}{res}      21.2
+{txt}     overall = {res}0.0002{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}3{txt},{res}481{txt}){col 67}={col 70}{res}  7923.13
+{txt}corr(u_i, Xb){col 16}= {res}-0.9461{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  lnnewgcapf_usd{col 18}{c |}      Coef.{col 30}   Std. Err.{col 42}      t{col 50}   P>|t|{col 58}     [95% Con{col 71}f. Interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}cenhat {c |}{col 18}{res}{space 2}-47.74554{col 30}{space 2}  .576233{col 41}{space 1}  -82.86{col 50}{space 3}0.000{col 58}{space 4}-48.87779{col 71}{space 3} -46.6133
+{txt}{space 2}lnnew_gsav_usd {c |}{col 18}{res}{space 2} .0747453{col 30}{space 2} .0118695{col 41}{space 1}    6.30{col 50}{space 3}0.000{col 58}{space 4} .0514229{col 71}{space 3} .0980677
+{txt}lnnewnet_fdi_usd {c |}{col 18}{res}{space 2}-.0124852{col 30}{space 2} .0049004{col 41}{space 1}   -2.55{col 50}{space 3}0.011{col 58}{space 4}-.0221141{col 71}{space 3}-.0028563
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} 41.40224{col 30}{space 2} .4779954{col 41}{space 1}   86.62{col 50}{space 3}0.000{col 58}{space 4} 40.46303{col 71}{space 3} 42.34146
+{txt}{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         sigma_u {c |} {res} 5.8590448
+         {txt}sigma_e {c |} {res} .12719878
+             {txt}rho {c |} {res} .99952891{txt}   (fraction of variance due to u_i)
+{hline 17}{c BT}{hline 64}
+F test that all u_i=0: F({res}23{txt}, {res}481{txt}) = {res}613.59{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg lnnewgcapf_usd cenhat lnnew_gsav_usd lnnewgnexp_usd,fe
+{p 0 6 2}{txt}note: lnnewgnexp_usd omitted because of collinearity{p_end}
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,318
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9461{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.0035{col 63}{txt}avg{col 67}={col 69}{res}      42.5
+{txt}     overall = {res}0.0170{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}2{txt},{res}1285{txt}){col 67}={col 70}{res} 11280.03
+{txt}corr(u_i, Xb){col 16}= {res}-0.9431{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}lnnewgcapf~d{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}cenhat {c |}{col 14}{res}{space 2}-47.71804{col 26}{space 2} .5190461{col 37}{space 1}  -91.93{col 46}{space 3}0.000{col 54}{space 4}-48.73631{col 67}{space 3}-46.69976
+{txt}lnnew_gsav~d {c |}{col 14}{res}{space 2} .0871121{col 26}{space 2} .0107532{col 37}{space 1}    8.10{col 46}{space 3}0.000{col 54}{space 4} .0660163{col 67}{space 3} .1082078
+{txt}lnnewgnexp~d {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}_cons {c |}{col 14}{res}{space 2} 41.67114{col 26}{space 2}  .445091{col 37}{space 1}   93.62{col 46}{space 3}0.000{col 54}{space 4} 40.79796{col 67}{space 3} 42.54433
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+     sigma_u {c |} {res} 5.6929793
+     {txt}sigma_e {c |} {res} .24227278
+         {txt}rho {c |} {res} .99819223{txt}   (fraction of variance due to u_i)
+{hline 13}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1285{txt}) = {res}480.09{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. su
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}obs_no {c |}{res}      1,491         746    430.5589          1       1491
+{txt}{space 8}time {c |}{res}      1,491    1995.703    17.53557       1960       2022
+{txt}{space 5}country {c |}{res}          0
+{txt}{space 2}house_type {c |}{res}          0
+{txt}{space 4}elec_sys {c |}{res}          0
+{txt}{hline 13}{c +}{hline 57}
+{space 3}win_seats {c |}{res}      1,491    113.7659    99.98494         12        418
+{txt}{space 1}total_seats {c |}{res}      1,491    252.3199    175.8697         40        735
+{txt}{space 9}cen {c |}{res}      1,491     .418438    .1382696       .135       .978
+{txt}{space 4}gsav_usd {c |}{res}      1,082    1.04e+11    1.80e+11  -1.20e+08   1.32e+12
+{txt}{space 1}net_fdi_usd {c |}{res}      1,124    2.37e+09    2.68e+10  -2.92e+11   1.62e+11
+{txt}{hline 13}{c +}{hline 57}
+{space 3}gcapf_usd {c |}{res}      1,351    8.39e+10    1.51e+11   3.69e+07   1.06e+12
+{txt}net_devaid~d {c |}{res}        337    7.46e+08    9.35e+08  -2.45e+08   5.37e+09
+{txt}goveff_per~k {c |}{res}        735    78.77569    18.32253   18.40796        100
+{txt}{space 1}goveff_esti {c |}{res}        735    1.030414    .7584608  -.9328825   2.347191
+{txt}{space 3}gnexp_usd {c |}{res}      1,351    3.60e+11    6.64e+11   3.19e+08   4.05e+12
+{txt}{hline 13}{c +}{hline 57}
+{space 2}exp_gs_usd {c |}{res}      1,352    1.40e+11    2.51e+11   8.15e+07   2.08e+12
+{txt}stocks_tra~d {c |}{res}        862    2.34e+11    5.19e+11      20000   4.19e+12
+{txt}mcap_comp_~d {c |}{res}        797    3.35e+11    6.45e+11    5600000   3.95e+12
+{txt}revenue_pe~p {c |}{res}      1,122    33.92638    10.44309   8.071262   91.31045
+{txt}{space 1}san_percpop {c |}{res}        703    93.76057    14.26705   14.08576        100
+{txt}{hline 13}{c +}{hline 57}
+mortal~nrate {c |}{res}         31    4.887097    6.571035         .8       36.4
+{txt}mortal~5rate {c |}{res}      1,460    19.29486    36.30382          2      242.8
+{txt}educ_lsec_~c {c |}{res}        318    82.10677    20.66178    5.04364   99.85985
+{txt}unpaid_f~24h {c |}{res}         49    17.67175    2.207854   12.65278       21.9
+{txt}women_3dec~c {c |}{res}         10       53.63    17.21014       27.6       83.7
+{txt}{hline 13}{c +}{hline 57}
+livbelow_~nc {c |}{res}        670    10.11134    3.302509        3.2       21.6
+{txt}mulpov_hea~p {c |}{res}          4       10.45    12.08042         .1       24.6
+{txt}mulpov_hea~b {c |}{res}        350    1.459143    2.367392          0       31.3
+{txt}livbelow_~rc {c |}{res}         81    5.721826    9.911093          0   53.68809
+{txt}{space 8}gini {c |}{res}        672    30.85357    3.738476       22.2       41.3
+{txt}{hline 13}{c +}{hline 57}
+inc_share~10 {c |}{res}        672    24.29911    2.349937       18.3       32.6
+{txt}povheadrat~s {c |}{res}        365    16.56082    4.538949        7.9       37.2
+{txt}new_gcapf_~d {c |}{res}      1,491    7.64e+10    1.46e+11  -1.11e+10   1.06e+12
+{txt}lnnewgcapf~d {c |}{res}      1,453    23.66417    1.945449   15.01373   27.68984
+{txt}new_gsav_usd {c |}{res}      1,491    7.15e+10    1.78e+11  -5.73e+11   1.32e+12
+{txt}{hline 13}{c +}{hline 57}
+lnnew_gsav~d {c |}{res}      1,342    23.93918    1.918342   17.85363   27.90817
+{txt}new_gnexp_~d {c |}{res}      1,491    3.27e+11    6.40e+11  -4.71e+10   4.05e+12
+{txt}lnnewgnexp~d {c |}{res}      1,453    25.08318    1.947077   18.29562   29.02913
+{txt}new_net_fd~d {c |}{res}      1,491    7.21e+09    1.35e+11  -5.85e+11   1.13e+12
+{txt}lnnewnet_f~d {c |}{res}        566    22.04283    2.642606    13.2236   27.74897
+{txt}{hline 13}{c +}{hline 57}
+new_revenu~p {c |}{res}      1,491    31.71883    13.60648  -104.5964   91.31045
+{txt}lnnewreven~p {c |}{res}      1,472    3.395536    .4993075  -1.400484   4.514265
+{txt}{space 9}cid {c |}{res}      1,491    16.23139    8.918767          1         31
+{txt}{space 5}_est_fe {c |}{res}      1,491    .3407109    .4741073          0          1
+{txt}{space 5}_est_re {c |}{res}      1,491    .3407109    .4741073          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 7}cdum1 {c |}{res}      1,491    .0214621    .1449675          0          1
+{txt}{space 7}cdum2 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 7}cdum3 {c |}{res}      1,491    .0335345    .1800881          0          1
+{txt}{space 7}cdum4 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 7}cdum5 {c |}{res}      1,491    .0214621    .1449675          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 7}cdum6 {c |}{res}      1,491    .0207914    .1427333          0          1
+{txt}{space 7}cdum7 {c |}{res}      1,491    .0181087    .1333891          0          1
+{txt}{space 7}cdum8 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 7}cdum9 {c |}{res}      1,491    .0207914    .1427333          0          1
+{txt}{space 6}cdum10 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 6}cdum11 {c |}{res}      1,491    .0221328    .1471647          0          1
+{txt}{space 6}cdum12 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum13 {c |}{res}      1,491    .0221328    .1471647          0          1
+{txt}{space 6}cdum14 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum15 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 6}cdum16 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum17 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum18 {c |}{res}      1,491    .0201207    .1404604          0          1
+{txt}{space 6}cdum19 {c |}{res}      1,491    .0207914    .1427333          0          1
+{txt}{space 6}cdum20 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 6}cdum21 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum22 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum23 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum24 {c |}{res}      1,491    .0214621    .1449675          0          1
+{txt}{space 6}cdum25 {c |}{res}      1,491    .0100604     .099829          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 6}cdum26 {c |}{res}      1,491      .01945    .1381468          0          1
+{txt}{space 6}cdum27 {c |}{res}      1,491    .0207914    .1427333          0          1
+{txt}{space 6}cdum28 {c |}{res}      1,491    .0308518     .172974          0          1
+{txt}{space 6}cdum29 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cdum30 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 6}cdum31 {c |}{res}      1,491    .0422535    .2012345          0          1
+{txt}{space 6}cenhat {c |}{res}      1,453    .4184825    .1187824   .2028468   .8016728
+
+{com}. reg gini cen inc_share_top10 mortality_5rate livbelow_50perc_midinc
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       669
+{txt}{hline 13}{c +}{hline 34}   F(4, 664)       = {res}  9024.16
+{txt}       Model {c |} {res} 9184.48679         4   2296.1217   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 168.949177       664  .254441532   {txt}R-squared       ={res}    0.9819
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9818
+{txt}       Total {c |} {res} 9353.43596       668  14.0021496   {txt}Root MSE        =   {res} .50442
+
+{txt}{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  gini{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 19}cen {c |}{col 24}{res}{space 2}  .273587{col 36}{space 2} .1739194{col 47}{space 1}    1.57{col 56}{space 3}0.116{col 64}{space 4}-.0679112{col 77}{space 3} .6150853
+{txt}{space 7}inc_share_top10 {c |}{col 24}{res}{space 2} 1.143459{col 36}{space 2} .0111843{col 47}{space 1}  102.24{col 56}{space 3}0.000{col 64}{space 4} 1.121498{col 77}{space 3}  1.16542
+{txt}{space 7}mortality_5rate {c |}{col 24}{res}{space 2} .0001465{col 36}{space 2}  .001226{col 47}{space 1}    0.12{col 56}{space 3}0.905{col 64}{space 4}-.0022608{col 77}{space 3} .0025539
+{txt}livbelow_50perc_midinc {c |}{col 24}{res}{space 2} .4197751{col 36}{space 2} .0083117{col 47}{space 1}   50.50{col 56}{space 3}0.000{col 64}{space 4} .4034547{col 77}{space 3} .4360954
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2}-1.284339{col 36}{space 2} .2288283{col 47}{space 1}   -5.61{col 56}{space 3}0.000{col 64}{space 4}-1.733654{col 77}{space 3}-.8350251
+{txt}{hline 23}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}.  reg gini cen inc_share_top10 livbelow_50perc_midinc
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       670
+{txt}{hline 13}{c +}{hline 34}   F(3, 666)       = {res} 11555.59
+{txt}       Model {c |} {res} 9183.54607         3  3061.18202   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  176.42959       666  .264909295   {txt}R-squared       ={res}    0.9812
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9811
+{txt}       Total {c |} {res} 9359.97566       669   13.990995   {txt}Root MSE        =   {res} .51469
+
+{txt}{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  gini{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 19}cen {c |}{col 24}{res}{space 2} .1654025{col 36}{space 2} .1634514{col 47}{space 1}    1.01{col 56}{space 3}0.312{col 64}{space 4}-.1555396{col 77}{space 3} .4863445
+{txt}{space 7}inc_share_top10 {c |}{col 24}{res}{space 2}  1.14328{col 36}{space 2} .0108044{col 47}{space 1}  105.82{col 56}{space 3}0.000{col 64}{space 4} 1.122065{col 77}{space 3} 1.164494
+{txt}livbelow_50perc_midinc {c |}{col 24}{res}{space 2} .4192091{col 36}{space 2}  .007659{col 47}{space 1}   54.73{col 56}{space 3}0.000{col 64}{space 4} .4041703{col 77}{space 3} .4342478
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2}-1.233689{col 36}{space 2} .2231392{col 47}{space 1}   -5.53{col 56}{space 3}0.000{col 64}{space 4} -1.67183{col 77}{space 3} -.795548
+{txt}{hline 23}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}.  xtreg gini cen inc_share_top10 livbelow_50perc_midinc
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}       670
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.9662                                         {txt}min = {res}        10
+{txt}     between = {res}0.9891                                         {txt}avg = {res}      21.6
+{txt}     overall = {res}0.9811                                         {txt}max = {res}        54
+
+                                                {txt}Wald chi2({res}3{txt})      =  {res} 19860.75
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        gini{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cen {c |}{col 14}{res}{space 2} .1115692{col 26}{space 2} .2036074{col 37}{space 1}    0.55{col 46}{space 3}0.584{col 54}{space 4} -.287494{col 67}{space 3} .5106323
+{txt}inc_share~10 {c |}{col 14}{res}{space 2} 1.058173{col 26}{space 2} .0112947{col 37}{space 1}   93.69{col 46}{space 3}0.000{col 54}{space 4} 1.036036{col 67}{space 3} 1.080311
+{txt}livbelow_~nc {c |}{col 14}{res}{space 2} .3875158{col 26}{space 2} .0088689{col 37}{space 1}   43.69{col 46}{space 3}0.000{col 54}{space 4}  .370133{col 67}{space 3} .4048985
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1.14761{col 26}{space 2} .2666867{col 37}{space 1}    4.30{col 46}{space 3}0.000{col 54}{space 4} .6249142{col 67}{space 3} 1.670307
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+     sigma_u {c |} {res} .37213824
+     {txt}sigma_e {c |} {res} .34170529
+         {txt}rho {c |} {res} .54255518{txt}   (fraction of variance due to u_i)
+{hline 13}{c BT}{hline 64}
+
+{com}. ipolate gini time, gen(new_gini) epolate by (country)
+
+.    gen lnnew_gini=log(new_gini)
+{txt}(63 missing values generated)
+
+{com}. ipolate inc_share_top10  time, gen(new_inc_share_top10) epolate by (country)
+
+. gen lnnew_inc_share_top10 =log(new_inc_share_top10 )
+{txt}(46 missing values generated)
+
+{com}.  ipolate livbelow_50perc_midinc  time, gen(new_livbelow_50perc_midinc) epolate by (country)
+
+. gen lnnew_livbelow_50perc_midinc =log(new_livbelow_50perc_midinc)
+{txt}(68 missing values generated)
+
+{com}. 
+. xtreg new_gini cen new_inc_share_top10 new_livbelow_50perc_midinc
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,491
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.9663                                         {txt}min = {res}        15
+{txt}     between = {res}0.9755                                         {txt}avg = {res}      48.1
+{txt}     overall = {res}0.9692                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}3{txt})      =  {res} 42977.28
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  new_gini{col 28}{c |}      Coef.{col 40}   Std. Err.{col 52}      z{col 60}   P>|z|{col 68}     [95% Con{col 81}f. Interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 23}cen {c |}{col 28}{res}{space 2} 2.421777{col 40}{space 2} .5238815{col 51}{space 1}    4.62{col 60}{space 3}0.000{col 68}{space 4} 1.394988{col 81}{space 3} 3.448566
+{txt}{space 7}new_inc_share_top10 {c |}{col 28}{res}{space 2} 1.243628{col 40}{space 2} .0065186{col 51}{space 1}  190.78{col 60}{space 3}0.000{col 68}{space 4} 1.230852{col 81}{space 3} 1.256405
+{txt}new_livbelow_50perc_midinc {c |}{col 28}{res}{space 2}  .366207{col 40}{space 2} .0076586{col 51}{space 1}   47.82{col 60}{space 3}0.000{col 68}{space 4} .3511965{col 81}{space 3} .3812175
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-4.045915{col 40}{space 2} .3628918{col 51}{space 1}  -11.15{col 60}{space 3}0.000{col 68}{space 4} -4.75717{col 81}{space 3}-3.334661
+{txt}{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                   sigma_u {c |} {res} 1.3448679
+                   {txt}sigma_e {c |} {res} 1.5770235
+                       {txt}rho {c |} {res} .42104454{txt}   (fraction of variance due to u_i)
+{hline 27}{c BT}{hline 64}
+
+{com}.  xtreg new_gini cen new_inc_share_top10 new_livbelow_50perc_midinc, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,491
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9663{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9752{col 63}{txt}avg{col 67}={col 69}{res}      48.1
+{txt}     overall = {res}0.9691{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}3{txt},{res}1457{txt}){col 67}={col 70}{res} 13944.70
+{txt}corr(u_i, Xb){col 16}= {res}0.2186{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  new_gini{col 28}{c |}      Coef.{col 40}   Std. Err.{col 52}      t{col 60}   P>|t|{col 68}     [95% Con{col 81}f. Interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 23}cen {c |}{col 28}{res}{space 2} 2.629454{col 40}{space 2} .5396898{col 51}{space 1}    4.87{col 60}{space 3}0.000{col 68}{space 4} 1.570802{col 81}{space 3} 3.688106
+{txt}{space 7}new_inc_share_top10 {c |}{col 28}{res}{space 2} 1.242665{col 40}{space 2} .0065839{col 51}{space 1}  188.74{col 60}{space 3}0.000{col 68}{space 4}  1.22975{col 81}{space 3}  1.25558
+{txt}new_livbelow_50perc_midinc {c |}{col 28}{res}{space 2} .3651653{col 40}{space 2}  .007771{col 51}{space 1}   46.99{col 60}{space 3}0.000{col 68}{space 4} .3499218{col 81}{space 3} .3804088
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-4.121995{col 40}{space 2} .2747548{col 51}{space 1}  -15.00{col 60}{space 3}0.000{col 68}{space 4}-4.660952{col 81}{space 3}-3.583038
+{txt}{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                   sigma_u {c |} {res} 1.3928504
+                   {txt}sigma_e {c |} {res} 1.5770235
+                       {txt}rho {c |} {res}  .4382238{txt}   (fraction of variance due to u_i)
+{hline 27}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1457{txt}) = {res}39.12{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.  xtreg cen new_inc_share_top10 cdum1-cdum30
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,491
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.0001                                         {txt}min = {res}        15
+{txt}     between = {res}1.0000                                         {txt}avg = {res}      48.1
+{txt}     overall = {res}0.6990                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}31{txt})     =  {res}  3388.56
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         cen{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+new_inc_s~10 {c |}{col 14}{res}{space 2} .0000897{col 26}{space 2} .0003159{col 37}{space 1}    0.28{col 46}{space 3}0.777{col 54}{space 4}-.0005295{col 67}{space 3} .0007088
+{txt}{space 7}cdum1 {c |}{col 14}{res}{space 2}-.0060244{col 26}{space 2} .0166495{col 37}{space 1}   -0.36{col 46}{space 3}0.717{col 54}{space 4}-.0386568{col 67}{space 3} .0266081
+{txt}{space 7}cdum2 {c |}{col 14}{res}{space 2}-.1230697{col 26}{space 2} .0137781{col 37}{space 1}   -8.93{col 46}{space 3}0.000{col 54}{space 4}-.1500744{col 67}{space 3}-.0960651
+{txt}{space 7}cdum3 {c |}{col 14}{res}{space 2} .2157077{col 26}{space 2} .0145192{col 37}{space 1}   14.86{col 46}{space 3}0.000{col 54}{space 4} .1872506{col 67}{space 3} .2441648
+{txt}{space 7}cdum4 {c |}{col 14}{res}{space 2}-.3119249{col 26}{space 2} .0137125{col 37}{space 1}  -22.75{col 46}{space 3}0.000{col 54}{space 4}-.3388009{col 67}{space 3} -.285049
+{txt}{space 7}cdum5 {c |}{col 14}{res}{space 2}-.1095104{col 26}{space 2} .0166512{col 37}{space 1}   -6.58{col 46}{space 3}0.000{col 54}{space 4}-.1421461{col 67}{space 3}-.0768746
+{txt}{space 7}cdum6 {c |}{col 14}{res}{space 2}-.0629766{col 26}{space 2} .0168212{col 37}{space 1}   -3.74{col 46}{space 3}0.000{col 54}{space 4}-.0959455{col 67}{space 3}-.0300077
+{txt}{space 7}cdum7 {c |}{col 14}{res}{space 2}-.2056712{col 26}{space 2} .0176497{col 37}{space 1}  -11.65{col 46}{space 3}0.000{col 54}{space 4}-.2402641{col 67}{space 3}-.1710784
+{txt}{space 7}cdum8 {c |}{col 14}{res}{space 2}-.2158947{col 26}{space 2} .0136691{col 37}{space 1}  -15.79{col 46}{space 3}0.000{col 54}{space 4}-.2426857{col 67}{space 3}-.1891037
+{txt}{space 7}cdum9 {c |}{col 14}{res}{space 2}-.2356763{col 26}{space 2} .0169507{col 37}{space 1}  -13.90{col 46}{space 3}0.000{col 54}{space 4} -.268899{col 67}{space 3}-.2024536
+{txt}{space 6}cdum10 {c |}{col 14}{res}{space 2}-.2873028{col 26}{space 2} .0137352{col 37}{space 1}  -20.92{col 46}{space 3}0.000{col 54}{space 4}-.3142234{col 67}{space 3}-.2603822
+{txt}{space 6}cdum11 {c |}{col 14}{res}{space 2}-.1370581{col 26}{space 2} .0164743{col 37}{space 1}   -8.32{col 46}{space 3}0.000{col 54}{space 4}-.1693471{col 67}{space 3}-.1047691
+{txt}{space 6}cdum12 {c |}{col 14}{res}{space 2}-.0051106{col 26}{space 2} .0137542{col 37}{space 1}   -0.37{col 46}{space 3}0.710{col 54}{space 4}-.0320684{col 67}{space 3} .0218472
+{txt}{space 6}cdum13 {c |}{col 14}{res}{space 2}-.0019358{col 26}{space 2}  .016994{col 37}{space 1}   -0.11{col 46}{space 3}0.909{col 54}{space 4}-.0352435{col 67}{space 3} .0313719
+{txt}{space 6}cdum14 {c |}{col 14}{res}{space 2}-.1899306{col 26}{space 2} .0148756{col 37}{space 1}  -12.77{col 46}{space 3}0.000{col 54}{space 4}-.2190863{col 67}{space 3}-.1607749
+{txt}{space 6}cdum15 {c |}{col 14}{res}{space 2}-.0232127{col 26}{space 2} .0137015{col 37}{space 1}   -1.69{col 46}{space 3}0.090{col 54}{space 4}-.0500671{col 67}{space 3} .0036418
+{txt}{space 6}cdum16 {c |}{col 14}{res}{space 2}-.0931826{col 26}{space 2} .0136592{col 37}{space 1}   -6.82{col 46}{space 3}0.000{col 54}{space 4}-.1199541{col 67}{space 3} -.066411
+{txt}{space 6}cdum17 {c |}{col 14}{res}{space 2}-.0963487{col 26}{space 2} .0136749{col 37}{space 1}   -7.05{col 46}{space 3}0.000{col 54}{space 4} -.123151{col 67}{space 3}-.0695464
+{txt}{space 6}cdum18 {c |}{col 14}{res}{space 2}-.2976246{col 26}{space 2} .0170053{col 37}{space 1}  -17.50{col 46}{space 3}0.000{col 54}{space 4}-.3309544{col 67}{space 3}-.2642947
+{txt}{space 6}cdum19 {c |}{col 14}{res}{space 2}-.1776963{col 26}{space 2} .0168852{col 37}{space 1}  -10.52{col 46}{space 3}0.000{col 54}{space 4}-.2107907{col 67}{space 3}-.1446019
+{txt}{space 6}cdum20 {c |}{col 14}{res}{space 2}-.1762053{col 26}{space 2} .0139425{col 37}{space 1}  -12.64{col 46}{space 3}0.000{col 54}{space 4}-.2035322{col 67}{space 3}-.1488785
+{txt}{space 6}cdum21 {c |}{col 14}{res}{space 2}-.0201591{col 26}{space 2} .0140778{col 37}{space 1}   -1.43{col 46}{space 3}0.152{col 54}{space 4}-.0477511{col 67}{space 3} .0074328
+{txt}{space 6}cdum22 {c |}{col 14}{res}{space 2} -.255755{col 26}{space 2} .0136648{col 37}{space 1}  -18.72{col 46}{space 3}0.000{col 54}{space 4}-.2825376{col 67}{space 3}-.2289725
+{txt}{space 6}cdum23 {c |}{col 14}{res}{space 2}-.1500079{col 26}{space 2} .0136764{col 37}{space 1}  -10.97{col 46}{space 3}0.000{col 54}{space 4}-.1768131{col 67}{space 3}-.1232026
+{txt}{space 6}cdum24 {c |}{col 14}{res}{space 2}-.1207068{col 26}{space 2} .0167332{col 37}{space 1}   -7.21{col 46}{space 3}0.000{col 54}{space 4}-.1535033{col 67}{space 3}-.0879102
+{txt}{space 6}cdum25 {c |}{col 14}{res}{space 2}-.0466077{col 26}{space 2} .0220449{col 37}{space 1}   -2.11{col 46}{space 3}0.034{col 54}{space 4}-.0898149{col 67}{space 3}-.0034006
+{txt}{space 6}cdum26 {c |}{col 14}{res}{space 2}-.1884047{col 26}{space 2} .0174263{col 37}{space 1}  -10.81{col 46}{space 3}0.000{col 54}{space 4}-.2225596{col 67}{space 3}-.1542497
+{txt}{space 6}cdum27 {c |}{col 14}{res}{space 2}-.2288425{col 26}{space 2} .0168661{col 37}{space 1}  -13.57{col 46}{space 3}0.000{col 54}{space 4}-.2618995{col 67}{space 3}-.1957855
+{txt}{space 6}cdum28 {c |}{col 14}{res}{space 2}-.0754009{col 26}{space 2} .0148703{col 37}{space 1}   -5.07{col 46}{space 3}0.000{col 54}{space 4}-.1045462{col 67}{space 3}-.0462557
+{txt}{space 6}cdum29 {c |}{col 14}{res}{space 2}-.1343572{col 26}{space 2} .0137163{col 37}{space 1}   -9.80{col 46}{space 3}0.000{col 54}{space 4}-.1612407{col 67}{space 3}-.1074737
+{txt}{space 6}cdum30 {c |}{col 14}{res}{space 2}-.2839541{col 26}{space 2}  .013696{col 37}{space 1}  -20.73{col 46}{space 3}0.000{col 54}{space 4}-.3107977{col 67}{space 3}-.2571104
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .5481177{col 26}{space 2} .0124186{col 37}{space 1}   44.14{col 46}{space 3}0.000{col 54}{space 4} .5237777{col 67}{space 3} .5724576
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+     sigma_u {c |} {res}         0
+     {txt}sigma_e {c |} {res} .07665815
+         {txt}rho {c |} {res}         0{txt}   (fraction of variance due to u_i)
+{hline 13}{c BT}{hline 64}
+
+{com}. twoway (scatter  new_gini new_inc_share_top10 )
+{res}
+{com}.  twoway (scatter  new_gini new_livbelow_50perc_midinc )
+{res}
+{com}.  xtreg new_gini cenhat new_inc_share_top10 new_livbelow_50perc_midinc, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,453
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9618{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9733{col 63}{txt}avg{col 67}={col 69}{res}      46.9
+{txt}     overall = {res}0.9652{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}3{txt},{res}1419{txt}){col 67}={col 70}{res} 11918.06
+{txt}corr(u_i, Xb){col 16}= {res}0.2072{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  new_gini{col 28}{c |}      Coef.{col 40}   Std. Err.{col 52}      t{col 60}   P>|t|{col 68}     [95% Con{col 81}f. Interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 20}cenhat {c |}{col 28}{res}{space 2} 2.668523{col 40}{space 2} 1.857079{col 51}{space 1}    1.44{col 60}{space 3}0.151{col 68}{space 4}-.9743918{col 81}{space 3} 6.311437
+{txt}{space 7}new_inc_share_top10 {c |}{col 28}{res}{space 2} 1.229944{col 40}{space 2} .0076025{col 51}{space 1}  161.78{col 60}{space 3}0.000{col 68}{space 4} 1.215031{col 81}{space 3} 1.244858
+{txt}new_livbelow_50perc_midinc {c |}{col 28}{res}{space 2} .3834289{col 40}{space 2}  .008235{col 51}{space 1}   46.56{col 60}{space 3}0.000{col 68}{space 4} .3672747{col 81}{space 3}  .399583
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-4.043274{col 40}{space 2} .8279006{col 51}{space 1}   -4.88{col 60}{space 3}0.000{col 68}{space 4}-5.667314{col 81}{space 3}-2.419233
+{txt}{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                   sigma_u {c |} {res} 1.3622527
+                   {txt}sigma_e {c |} {res} 1.5685771
+                       {txt}rho {c |} {res} .42994923{txt}   (fraction of variance due to u_i)
+{hline 27}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1419{txt}) = {res}36.05{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg gini cenhat inc_share_top10 livbelow_50perc_midinc, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       670
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9663{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.9813{col 63}{txt}avg{col 67}={col 69}{res}      21.6
+{txt}     overall = {res}0.9780{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}3{txt},{res}636{txt}){col 67}={col 70}{res}  6080.94
+{txt}corr(u_i, Xb){col 16}= {res}0.4378{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  gini{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 16}cenhat {c |}{col 24}{res}{space 2}   2.3346{col 36}{space 2} 1.512152{col 47}{space 1}    1.54{col 56}{space 3}0.123{col 64}{space 4}-.6348149{col 77}{space 3} 5.304015
+{txt}{space 7}inc_share_top10 {c |}{col 24}{res}{space 2} 1.048359{col 36}{space 2} .0114924{col 47}{space 1}   91.22{col 56}{space 3}0.000{col 64}{space 4} 1.025792{col 77}{space 3} 1.070927
+{txt}livbelow_50perc_midinc {c |}{col 24}{res}{space 2}   .38672{col 36}{space 2} .0100601{col 47}{space 1}   38.44{col 56}{space 3}0.000{col 64}{space 4} .3669649{col 77}{space 3} .4064751
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} .5306255{col 36}{space 2} .7105305{col 47}{space 1}    0.75{col 56}{space 3}0.455{col 64}{space 4}-.8646439{col 77}{space 3} 1.925895
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} .55093342
+               {txt}sigma_e {c |} {res} .34107375
+                   {txt}rho {c |} {res} .72292765{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}636{txt}) = {res}29.13{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.  xtreg gini cenhat inc_share_top10, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       672
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.8880{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.3274{col 63}{txt}avg{col 67}={col 69}{res}      21.7
+{txt}     overall = {res}0.4197{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}2{txt},{res}639{txt}){col 67}={col 70}{res}  2534.23
+{txt}corr(u_i, Xb){col 16}= {res}-0.2462{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      t{col 49}   P>|t|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cenhat {c |}{col 17}{res}{space 2}-21.64575{col 29}{space 2} 2.503724{col 40}{space 1}   -8.65{col 49}{space 3}0.000{col 57}{space 4}-26.56227{col 70}{space 3}-16.72923
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.234656{col 29}{space 2} .0189495{col 40}{space 1}   65.16{col 49}{space 3}0.000{col 57}{space 4} 1.197445{col 70}{space 3} 1.271867
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 9.524682{col 29}{space 2} 1.218881{col 40}{space 1}    7.81{col 49}{space 3}0.000{col 57}{space 4} 7.131186{col 70}{space 3} 11.91818
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res}   3.04092
+        {txt}sigma_e {c |} {res} .62048475
+            {txt}rho {c |} {res} .96002975{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}639{txt}) = {res}62.93{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.  xtreg new_gini cenhat new_inc_share_top10, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,453
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9035{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9145{col 63}{txt}avg{col 67}={col 69}{res}      46.9
+{txt}     overall = {res}0.9046{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}2{txt},{res}1420{txt}){col 67}={col 70}{res}  6648.15
+{txt}corr(u_i, Xb){col 16}= {res}0.2339{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           new_gini{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}cenhat {c |}{col 21}{res}{space 2} 2.494638{col 33}{space 2} 2.951515{col 44}{space 1}    0.85{col 53}{space 3}0.398{col 61}{space 4}-3.295159{col 74}{space 3} 8.284435
+{txt}new_inc_share_top10 {c |}{col 21}{res}{space 2} 1.322625{col 33}{space 2} .0116615{col 44}{space 1}  113.42{col 53}{space 3}0.000{col 61}{space 4}  1.29975{col 74}{space 3} 1.345501
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-2.439782{col 33}{space 2} 1.314673{col 44}{space 1}   -1.86{col 53}{space 3}0.064{col 61}{space 4}-5.018691{col 74}{space 3} .1391275
+{txt}{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+            sigma_u {c |} {res} 2.5266346
+            {txt}sigma_e {c |} {res} 2.4929948
+                {txt}rho {c |} {res} .50670134{txt}   (fraction of variance due to u_i)
+{hline 20}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1420{txt}) = {res}46.75{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg gini cen inc_share_top10, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       672
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.8750{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.8979{col 63}{txt}avg{col 67}={col 69}{res}      21.7
+{txt}     overall = {res}0.8956{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}2{txt},{res}639{txt}){col 67}={col 70}{res}  2236.14
+{txt}corr(u_i, Xb){col 16}= {res}0.4516{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      t{col 49}   P>|t|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}cen {c |}{col 17}{res}{space 2}  .177446{col 29}{space 2} .4080768{col 40}{space 1}    0.43{col 49}{space 3}0.664{col 57}{space 4}-.6238876{col 70}{space 3} .9787797
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.282385{col 29}{space 2} .0191921{col 40}{space 1}   66.82{col 49}{space 3}0.000{col 57}{space 4} 1.244698{col 70}{space 3} 1.320072
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-.3783921{col 29}{space 2} .5021664{col 40}{space 1}   -0.75{col 49}{space 3}0.451{col 57}{space 4}-1.364488{col 70}{space 3} .6077037
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res} 1.2752948
+        {txt}sigma_e {c |} {res} .65567324
+            {txt}rho {c |} {res} .79092999{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}639{txt}) = {res}53.92{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. 
+. xtreg gini cenhat inc_share_top10, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       672
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.8880{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.3274{col 63}{txt}avg{col 67}={col 69}{res}      21.7
+{txt}     overall = {res}0.4197{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}2{txt},{res}639{txt}){col 67}={col 70}{res}  2534.23
+{txt}corr(u_i, Xb){col 16}= {res}-0.2462{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      t{col 49}   P>|t|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cenhat {c |}{col 17}{res}{space 2}-21.64575{col 29}{space 2} 2.503724{col 40}{space 1}   -8.65{col 49}{space 3}0.000{col 57}{space 4}-26.56227{col 70}{space 3}-16.72923
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.234656{col 29}{space 2} .0189495{col 40}{space 1}   65.16{col 49}{space 3}0.000{col 57}{space 4} 1.197445{col 70}{space 3} 1.271867
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 9.524682{col 29}{space 2} 1.218881{col 40}{space 1}    7.81{col 49}{space 3}0.000{col 57}{space 4} 7.131186{col 70}{space 3} 11.91818
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res}   3.04092
+        {txt}sigma_e {c |} {res} .62048475
+            {txt}rho {c |} {res} .96002975{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}639{txt}) = {res}62.93{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. 
+.  xtreg cen new_inc_share_top10 cdum1-cdum30
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}     1,491
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.0001                                         {txt}min = {res}        15
+{txt}     between = {res}1.0000                                         {txt}avg = {res}      48.1
+{txt}     overall = {res}0.6990                                         {txt}max = {res}        63
+
+                                                {txt}Wald chi2({res}31{txt})     =  {res}  3388.56
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         cen{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+new_inc_s~10 {c |}{col 14}{res}{space 2} .0000897{col 26}{space 2} .0003159{col 37}{space 1}    0.28{col 46}{space 3}0.777{col 54}{space 4}-.0005295{col 67}{space 3} .0007088
+{txt}{space 7}cdum1 {c |}{col 14}{res}{space 2}-.0060244{col 26}{space 2} .0166495{col 37}{space 1}   -0.36{col 46}{space 3}0.717{col 54}{space 4}-.0386568{col 67}{space 3} .0266081
+{txt}{space 7}cdum2 {c |}{col 14}{res}{space 2}-.1230697{col 26}{space 2} .0137781{col 37}{space 1}   -8.93{col 46}{space 3}0.000{col 54}{space 4}-.1500744{col 67}{space 3}-.0960651
+{txt}{space 7}cdum3 {c |}{col 14}{res}{space 2} .2157077{col 26}{space 2} .0145192{col 37}{space 1}   14.86{col 46}{space 3}0.000{col 54}{space 4} .1872506{col 67}{space 3} .2441648
+{txt}{space 7}cdum4 {c |}{col 14}{res}{space 2}-.3119249{col 26}{space 2} .0137125{col 37}{space 1}  -22.75{col 46}{space 3}0.000{col 54}{space 4}-.3388009{col 67}{space 3} -.285049
+{txt}{space 7}cdum5 {c |}{col 14}{res}{space 2}-.1095104{col 26}{space 2} .0166512{col 37}{space 1}   -6.58{col 46}{space 3}0.000{col 54}{space 4}-.1421461{col 67}{space 3}-.0768746
+{txt}{space 7}cdum6 {c |}{col 14}{res}{space 2}-.0629766{col 26}{space 2} .0168212{col 37}{space 1}   -3.74{col 46}{space 3}0.000{col 54}{space 4}-.0959455{col 67}{space 3}-.0300077
+{txt}{space 7}cdum7 {c |}{col 14}{res}{space 2}-.2056712{col 26}{space 2} .0176497{col 37}{space 1}  -11.65{col 46}{space 3}0.000{col 54}{space 4}-.2402641{col 67}{space 3}-.1710784
+{txt}{space 7}cdum8 {c |}{col 14}{res}{space 2}-.2158947{col 26}{space 2} .0136691{col 37}{space 1}  -15.79{col 46}{space 3}0.000{col 54}{space 4}-.2426857{col 67}{space 3}-.1891037
+{txt}{space 7}cdum9 {c |}{col 14}{res}{space 2}-.2356763{col 26}{space 2} .0169507{col 37}{space 1}  -13.90{col 46}{space 3}0.000{col 54}{space 4} -.268899{col 67}{space 3}-.2024536
+{txt}{space 6}cdum10 {c |}{col 14}{res}{space 2}-.2873028{col 26}{space 2} .0137352{col 37}{space 1}  -20.92{col 46}{space 3}0.000{col 54}{space 4}-.3142234{col 67}{space 3}-.2603822
+{txt}{space 6}cdum11 {c |}{col 14}{res}{space 2}-.1370581{col 26}{space 2} .0164743{col 37}{space 1}   -8.32{col 46}{space 3}0.000{col 54}{space 4}-.1693471{col 67}{space 3}-.1047691
+{txt}{space 6}cdum12 {c |}{col 14}{res}{space 2}-.0051106{col 26}{space 2} .0137542{col 37}{space 1}   -0.37{col 46}{space 3}0.710{col 54}{space 4}-.0320684{col 67}{space 3} .0218472
+{txt}{space 6}cdum13 {c |}{col 14}{res}{space 2}-.0019358{col 26}{space 2}  .016994{col 37}{space 1}   -0.11{col 46}{space 3}0.909{col 54}{space 4}-.0352435{col 67}{space 3} .0313719
+{txt}{space 6}cdum14 {c |}{col 14}{res}{space 2}-.1899306{col 26}{space 2} .0148756{col 37}{space 1}  -12.77{col 46}{space 3}0.000{col 54}{space 4}-.2190863{col 67}{space 3}-.1607749
+{txt}{space 6}cdum15 {c |}{col 14}{res}{space 2}-.0232127{col 26}{space 2} .0137015{col 37}{space 1}   -1.69{col 46}{space 3}0.090{col 54}{space 4}-.0500671{col 67}{space 3} .0036418
+{txt}{space 6}cdum16 {c |}{col 14}{res}{space 2}-.0931826{col 26}{space 2} .0136592{col 37}{space 1}   -6.82{col 46}{space 3}0.000{col 54}{space 4}-.1199541{col 67}{space 3} -.066411
+{txt}{space 6}cdum17 {c |}{col 14}{res}{space 2}-.0963487{col 26}{space 2} .0136749{col 37}{space 1}   -7.05{col 46}{space 3}0.000{col 54}{space 4} -.123151{col 67}{space 3}-.0695464
+{txt}{space 6}cdum18 {c |}{col 14}{res}{space 2}-.2976246{col 26}{space 2} .0170053{col 37}{space 1}  -17.50{col 46}{space 3}0.000{col 54}{space 4}-.3309544{col 67}{space 3}-.2642947
+{txt}{space 6}cdum19 {c |}{col 14}{res}{space 2}-.1776963{col 26}{space 2} .0168852{col 37}{space 1}  -10.52{col 46}{space 3}0.000{col 54}{space 4}-.2107907{col 67}{space 3}-.1446019
+{txt}{space 6}cdum20 {c |}{col 14}{res}{space 2}-.1762053{col 26}{space 2} .0139425{col 37}{space 1}  -12.64{col 46}{space 3}0.000{col 54}{space 4}-.2035322{col 67}{space 3}-.1488785
+{txt}{space 6}cdum21 {c |}{col 14}{res}{space 2}-.0201591{col 26}{space 2} .0140778{col 37}{space 1}   -1.43{col 46}{space 3}0.152{col 54}{space 4}-.0477511{col 67}{space 3} .0074328
+{txt}{space 6}cdum22 {c |}{col 14}{res}{space 2} -.255755{col 26}{space 2} .0136648{col 37}{space 1}  -18.72{col 46}{space 3}0.000{col 54}{space 4}-.2825376{col 67}{space 3}-.2289725
+{txt}{space 6}cdum23 {c |}{col 14}{res}{space 2}-.1500079{col 26}{space 2} .0136764{col 37}{space 1}  -10.97{col 46}{space 3}0.000{col 54}{space 4}-.1768131{col 67}{space 3}-.1232026
+{txt}{space 6}cdum24 {c |}{col 14}{res}{space 2}-.1207068{col 26}{space 2} .0167332{col 37}{space 1}   -7.21{col 46}{space 3}0.000{col 54}{space 4}-.1535033{col 67}{space 3}-.0879102
+{txt}{space 6}cdum25 {c |}{col 14}{res}{space 2}-.0466077{col 26}{space 2} .0220449{col 37}{space 1}   -2.11{col 46}{space 3}0.034{col 54}{space 4}-.0898149{col 67}{space 3}-.0034006
+{txt}{space 6}cdum26 {c |}{col 14}{res}{space 2}-.1884047{col 26}{space 2} .0174263{col 37}{space 1}  -10.81{col 46}{space 3}0.000{col 54}{space 4}-.2225596{col 67}{space 3}-.1542497
+{txt}{space 6}cdum27 {c |}{col 14}{res}{space 2}-.2288425{col 26}{space 2} .0168661{col 37}{space 1}  -13.57{col 46}{space 3}0.000{col 54}{space 4}-.2618995{col 67}{space 3}-.1957855
+{txt}{space 6}cdum28 {c |}{col 14}{res}{space 2}-.0754009{col 26}{space 2} .0148703{col 37}{space 1}   -5.07{col 46}{space 3}0.000{col 54}{space 4}-.1045462{col 67}{space 3}-.0462557
+{txt}{space 6}cdum29 {c |}{col 14}{res}{space 2}-.1343572{col 26}{space 2} .0137163{col 37}{space 1}   -9.80{col 46}{space 3}0.000{col 54}{space 4}-.1612407{col 67}{space 3}-.1074737
+{txt}{space 6}cdum30 {c |}{col 14}{res}{space 2}-.2839541{col 26}{space 2}  .013696{col 37}{space 1}  -20.73{col 46}{space 3}0.000{col 54}{space 4}-.3107977{col 67}{space 3}-.2571104
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .5481177{col 26}{space 2} .0124186{col 37}{space 1}   44.14{col 46}{space 3}0.000{col 54}{space 4} .5237777{col 67}{space 3} .5724576
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+     sigma_u {c |} {res}         0
+     {txt}sigma_e {c |} {res} .07665815
+         {txt}rho {c |} {res}         0{txt}   (fraction of variance due to u_i)
+{hline 13}{c BT}{hline 64}
+
+{com}.     predict cenhat2
+{txt}(option xb assumed; fitted values)
+
+{com}.  xtreg gini cenhat inc_share_top10, fe if country="Bangladesh"
+{err}option {bf:if} not allowed
+{txt}{search r(198):r(198);}
+
+{com}. xtreg gini cenhat inc_share_top10 if country=="Bangladesh", fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}        10
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}         1
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9927{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}     .{col 63}{txt}avg{col 67}={col 69}{res}      10.0
+{txt}     overall = {res}0.9927{col 63}{txt}max{col 67}={col 69}{res}        10
+
+{txt}{col 49}F({res}2{txt},{res}7{txt}){col 67}={col 70}{res}   475.69
+{txt}corr(u_i, Xb){col 16}= {res}     .{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      t{col 49}   P>|t|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cenhat {c |}{col 17}{res}{space 2}-23.62857{col 29}{space 2} 6.013347{col 40}{space 1}   -3.93{col 49}{space 3}0.006{col 57}{space 4}-37.84787{col 70}{space 3}-9.409261
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.149533{col 29}{space 2} .0545039{col 40}{space 1}   21.09{col 49}{space 3}0.000{col 57}{space 4} 1.020652{col 70}{space 3} 1.278414
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 19.00857{col 29}{space 2} 5.594741{col 40}{space 1}    3.40{col 49}{space 3}0.011{col 57}{space 4} 5.779107{col 70}{space 3} 32.23803
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res}         .
+        {txt}sigma_e {c |} {res} .29108412
+            {txt}rho {c |} {res}         .{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+F test that all u_i=0: F({res}0{txt}, {res}7{txt}) = {res}.{col 62}{txt}Prob > F = {res}     .
+
+{com}.  xtreg gini cenhat inc_share_top10 cdum3, fe
+{p 0 6 2}{txt}note: cdum3 omitted because of collinearity{p_end}
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       672
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.8880{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.3274{col 63}{txt}avg{col 67}={col 69}{res}      21.7
+{txt}     overall = {res}0.4197{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}2{txt},{res}639{txt}){col 67}={col 70}{res}  2534.23
+{txt}corr(u_i, Xb){col 16}= {res}-0.2462{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      t{col 49}   P>|t|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cenhat {c |}{col 17}{res}{space 2}-21.64575{col 29}{space 2} 2.503724{col 40}{space 1}   -8.65{col 49}{space 3}0.000{col 57}{space 4}-26.56227{col 70}{space 3}-16.72923
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.234656{col 29}{space 2} .0189495{col 40}{space 1}   65.16{col 49}{space 3}0.000{col 57}{space 4} 1.197445{col 70}{space 3} 1.271867
+{txt}{space 10}cdum3 {c |}{col 17}{res}{space 2}        0{col 29}{txt}  (omitted)
+{space 10}_cons {c |}{col 17}{res}{space 2} 9.524682{col 29}{space 2} 1.218881{col 40}{space 1}    7.81{col 49}{space 3}0.000{col 57}{space 4} 7.131186{col 70}{space 3} 11.91818
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res}   3.04092
+        {txt}sigma_e {c |} {res} .62048475
+            {txt}rho {c |} {res} .96002975{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}639{txt}) = {res}62.93{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg gini cenhat inc_share_top10 cdum3
+{res}
+{txt}Random-effects GLS regression                   Number of obs     = {res}       672
+{txt}Group variable: {res}cid                             {txt}Number of groups  = {res}        31
+
+{txt}R-sq:                                           Obs per group:
+     within  = {res}0.8802                                         {txt}min = {res}        10
+{txt}     between = {res}0.8634                                         {txt}avg = {res}      21.7
+{txt}     overall = {res}0.8583                                         {txt}max = {res}        54
+
+                                                {txt}Wald chi2({res}3{txt})      =  {res}  4764.43
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2       =     {res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      z{col 49}   P>|z|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cenhat {c |}{col 17}{res}{space 2}-4.899209{col 29}{space 2} 1.608626{col 40}{space 1}   -3.05{col 49}{space 3}0.002{col 57}{space 4}-8.052058{col 70}{space 3}-1.746359
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.287007{col 29}{space 2} .0189321{col 40}{space 1}   67.98{col 49}{space 3}0.000{col 57}{space 4} 1.249901{col 70}{space 3} 1.324114
+{txt}{space 10}cdum3 {c |}{col 17}{res}{space 2}-.3792971{col 29}{space 2} 1.267912{col 40}{space 1}   -0.30{col 49}{space 3}0.765{col 57}{space 4}-2.864358{col 70}{space 3} 2.105764
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 1.536563{col 29}{space 2} .8529062{col 40}{space 1}    1.80{col 49}{space 3}0.072{col 57}{space 4}-.1351027{col 70}{space 3} 3.208228
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res} 1.0225529
+        {txt}sigma_e {c |} {res} .62048475
+            {txt}rho {c |} {res} .73088417{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+
+{com}. gen cdumcen= cdums*cenhat
+{err}cdums not found
+{txt}{search r(111):r(111);}
+
+{com}. gen cdumcen= cdum3*cenhat
+{txt}(38 missing values generated)
+
+{com}.  xtreg gini cenhat inc_share_top10  cdumcen, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       672
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.8881{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.3567{col 63}{txt}avg{col 67}={col 69}{res}      21.7
+{txt}     overall = {res}0.4315{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}3{txt},{res}638{txt}){col 67}={col 70}{res}  1687.36
+{txt}corr(u_i, Xb){col 16}= {res}-0.2181{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           gini{col 17}{c |}      Coef.{col 29}   Std. Err.{col 41}      t{col 49}   P>|t|{col 57}     [95% Con{col 70}f. Interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}cenhat {c |}{col 17}{res}{space 2}-21.87723{col 29}{space 2} 2.566026{col 40}{space 1}   -8.53{col 49}{space 3}0.000{col 57}{space 4} -26.9161{col 70}{space 3}-16.83835
+{txt}inc_share_top10 {c |}{col 17}{res}{space 2} 1.235158{col 29}{space 2}     .019{col 40}{space 1}   65.01{col 49}{space 3}0.000{col 57}{space 4} 1.197848{col 70}{space 3} 1.272468
+{txt}{space 8}cdumcen {c |}{col 17}{res}{space 2} 4.262929{col 29}{space 2} 10.21619{col 40}{space 1}    0.42{col 49}{space 3}0.677{col 57}{space 4} -15.7985{col 70}{space 3} 24.32436
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}  9.55678{col 29}{space 2} 1.222093{col 40}{space 1}    7.82{col 49}{space 3}0.000{col 57}{space 4}  7.15697{col 70}{space 3} 11.95659
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+        sigma_u {c |} {res} 2.9120255
+        {txt}sigma_e {c |} {res} .62088612
+            {txt}rho {c |} {res} .95651635{txt}   (fraction of variance due to u_i)
+{hline 16}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}638{txt}) = {res}53.73{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.   xtreg new_gini cenhat new_inc_share_top10 new_livbelow_50perc_midinc, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,453
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9618{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9733{col 63}{txt}avg{col 67}={col 69}{res}      46.9
+{txt}     overall = {res}0.9652{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}3{txt},{res}1419{txt}){col 67}={col 70}{res} 11918.06
+{txt}corr(u_i, Xb){col 16}= {res}0.2072{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  new_gini{col 28}{c |}      Coef.{col 40}   Std. Err.{col 52}      t{col 60}   P>|t|{col 68}     [95% Con{col 81}f. Interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 20}cenhat {c |}{col 28}{res}{space 2} 2.668523{col 40}{space 2} 1.857079{col 51}{space 1}    1.44{col 60}{space 3}0.151{col 68}{space 4}-.9743918{col 81}{space 3} 6.311437
+{txt}{space 7}new_inc_share_top10 {c |}{col 28}{res}{space 2} 1.229944{col 40}{space 2} .0076025{col 51}{space 1}  161.78{col 60}{space 3}0.000{col 68}{space 4} 1.215031{col 81}{space 3} 1.244858
+{txt}new_livbelow_50perc_midinc {c |}{col 28}{res}{space 2} .3834289{col 40}{space 2}  .008235{col 51}{space 1}   46.56{col 60}{space 3}0.000{col 68}{space 4} .3672747{col 81}{space 3}  .399583
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-4.043274{col 40}{space 2} .8279006{col 51}{space 1}   -4.88{col 60}{space 3}0.000{col 68}{space 4}-5.667314{col 81}{space 3}-2.419233
+{txt}{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                   sigma_u {c |} {res} 1.3622527
+                   {txt}sigma_e {c |} {res} 1.5685771
+                       {txt}rho {c |} {res} .42994923{txt}   (fraction of variance due to u_i)
+{hline 27}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1419{txt}) = {res}36.05{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg new_gini cenhat new_inc_share_top10 new_livbelow_50perc_midinc cdumcen, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,453
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9618{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9385{col 63}{txt}avg{col 67}={col 69}{res}      46.9
+{txt}     overall = {res}0.9464{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}4{txt},{res}1418{txt}){col 67}={col 70}{res}  8937.20
+{txt}corr(u_i, Xb){col 16}= {res}0.0379{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  new_gini{col 28}{c |}      Coef.{col 40}   Std. Err.{col 52}      t{col 60}   P>|t|{col 68}     [95% Con{col 81}f. Interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 20}cenhat {c |}{col 28}{res}{space 2} 2.414263{col 40}{space 2} 1.880105{col 51}{space 1}    1.28{col 60}{space 3}0.199{col 68}{space 4}-1.273822{col 81}{space 3} 6.102348
+{txt}{space 7}new_inc_share_top10 {c |}{col 28}{res}{space 2} 1.230414{col 40}{space 2} .0076224{col 51}{space 1}  161.42{col 60}{space 3}0.000{col 68}{space 4} 1.215462{col 81}{space 3} 1.245366
+{txt}new_livbelow_50perc_midinc {c |}{col 28}{res}{space 2}  .383153{col 40}{space 2} .0082418{col 51}{space 1}   46.49{col 60}{space 3}0.000{col 68}{space 4} .3669855{col 81}{space 3} .3993205
+{txt}{space 19}cdumcen {c |}{col 28}{res}{space 2} 9.535992{col 40}{space 2} 10.96407{col 51}{space 1}    0.87{col 60}{space 3}0.385{col 68}{space 4}-11.97154{col 81}{space 3} 31.04352
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-4.196495{col 40}{space 2} .8465058{col 51}{space 1}   -4.96{col 60}{space 3}0.000{col 68}{space 4}-5.857033{col 81}{space 3}-2.535957
+{txt}{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                   sigma_u {c |} {res}  2.037118
+                   {txt}sigma_e {c |} {res} 1.5687117
+                       {txt}rho {c |} {res} .62774682{txt}   (fraction of variance due to u_i)
+{hline 27}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1418{txt}) = {res}36.01{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.  xtreg new_gini cenhat new_inc_share_top10 new_livbelow_50perc_midinc, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     1,453
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9618{col 63}{txt}min{col 67}={col 69}{res}        15
+{txt}     between = {res}0.9733{col 63}{txt}avg{col 67}={col 69}{res}      46.9
+{txt}     overall = {res}0.9652{col 63}{txt}max{col 67}={col 69}{res}        63
+
+{txt}{col 49}F({res}3{txt},{res}1419{txt}){col 67}={col 70}{res} 11918.06
+{txt}corr(u_i, Xb){col 16}= {res}0.2072{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  new_gini{col 28}{c |}      Coef.{col 40}   Std. Err.{col 52}      t{col 60}   P>|t|{col 68}     [95% Con{col 81}f. Interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 20}cenhat {c |}{col 28}{res}{space 2} 2.668523{col 40}{space 2} 1.857079{col 51}{space 1}    1.44{col 60}{space 3}0.151{col 68}{space 4}-.9743918{col 81}{space 3} 6.311437
+{txt}{space 7}new_inc_share_top10 {c |}{col 28}{res}{space 2} 1.229944{col 40}{space 2} .0076025{col 51}{space 1}  161.78{col 60}{space 3}0.000{col 68}{space 4} 1.215031{col 81}{space 3} 1.244858
+{txt}new_livbelow_50perc_midinc {c |}{col 28}{res}{space 2} .3834289{col 40}{space 2}  .008235{col 51}{space 1}   46.56{col 60}{space 3}0.000{col 68}{space 4} .3672747{col 81}{space 3}  .399583
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-4.043274{col 40}{space 2} .8279006{col 51}{space 1}   -4.88{col 60}{space 3}0.000{col 68}{space 4}-5.667314{col 81}{space 3}-2.419233
+{txt}{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                   sigma_u {c |} {res} 1.3622527
+                   {txt}sigma_e {c |} {res} 1.5685771
+                       {txt}rho {c |} {res} .42994923{txt}   (fraction of variance due to u_i)
+{hline 27}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}1419{txt}) = {res}36.05{col 62}{txt}Prob > F = {res}0.0000
+
+{com}.  xtreg gini cenhat inc_share_top10 livbelow_50perc_midinc, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       670
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9663{col 63}{txt}min{col 67}={col 69}{res}        10
+{txt}     between = {res}0.9813{col 63}{txt}avg{col 67}={col 69}{res}      21.6
+{txt}     overall = {res}0.9780{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}3{txt},{res}636{txt}){col 67}={col 70}{res}  6080.94
+{txt}corr(u_i, Xb){col 16}= {res}0.4378{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  gini{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 16}cenhat {c |}{col 24}{res}{space 2}   2.3346{col 36}{space 2} 1.512152{col 47}{space 1}    1.54{col 56}{space 3}0.123{col 64}{space 4}-.6348149{col 77}{space 3} 5.304015
+{txt}{space 7}inc_share_top10 {c |}{col 24}{res}{space 2} 1.048359{col 36}{space 2} .0114924{col 47}{space 1}   91.22{col 56}{space 3}0.000{col 64}{space 4} 1.025792{col 77}{space 3} 1.070927
+{txt}livbelow_50perc_midinc {c |}{col 24}{res}{space 2}   .38672{col 36}{space 2} .0100601{col 47}{space 1}   38.44{col 56}{space 3}0.000{col 64}{space 4} .3669649{col 77}{space 3} .4064751
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} .5306255{col 36}{space 2} .7105305{col 47}{space 1}    0.75{col 56}{space 3}0.455{col 64}{space 4}-.8646439{col 77}{space 3} 1.925895
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} .55093342
+               {txt}sigma_e {c |} {res} .34107375
+                   {txt}rho {c |} {res} .72292765{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}636{txt}) = {res}29.13{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. xtreg gini cenhat inc_share_top10 livbelow_50perc_midinc mortality_5rate, fe
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}       669
+{txt}Group variable: {res}cid{txt}{col 49}Number of groups{col 67}={col 69}{res}        31
+
+{txt}R-sq:{col 49}Obs per group:
+     within  = {res}0.9699{col 63}{txt}min{col 67}={col 69}{res}         9
+{txt}     between = {res}0.9449{col 63}{txt}avg{col 67}={col 69}{res}      21.6
+{txt}     overall = {res}0.9533{col 63}{txt}max{col 67}={col 69}{res}        54
+
+{txt}{col 49}F({res}4{txt},{res}634{txt}){col 67}={col 70}{res}  5115.95
+{txt}corr(u_i, Xb){col 16}= {res}-0.0817{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                  gini{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 16}cenhat {c |}{col 24}{res}{space 2}  7.33488{col 36}{space 2}  1.70489{col 47}{space 1}    4.30{col 56}{space 3}0.000{col 64}{space 4} 3.986966{col 77}{space 3}  10.6828
+{txt}{space 7}inc_share_top10 {c |}{col 24}{res}{space 2} 1.034017{col 36}{space 2} .0109908{col 47}{space 1}   94.08{col 56}{space 3}0.000{col 64}{space 4} 1.012435{col 77}{space 3}   1.0556
+{txt}livbelow_50perc_midinc {c |}{col 24}{res}{space 2} .4071624{col 36}{space 2} .0097752{col 47}{space 1}   41.65{col 56}{space 3}0.000{col 64}{space 4} .3879667{col 77}{space 3} .4263582
+{txt}{space 7}mortality_5rate {c |}{col 24}{res}{space 2}-.0094946{col 36}{space 2} .0015336{col 47}{space 1}   -6.19{col 56}{space 3}0.000{col 64}{space 4}-.0125062{col 77}{space 3} -.006483
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} -1.24439{col 36}{space 2} .7512646{col 47}{space 1}   -1.66{col 56}{space 3}0.098{col 64}{space 4}-2.719658{col 77}{space 3} .2308779
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res}  .8255776
+               {txt}sigma_e {c |} {res} .32202605
+                   {txt}rho {c |} {res} .86794406{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+F test that all u_i=0: F({res}30{txt}, {res}634{txt}) = {res}32.85{col 62}{txt}Prob > F = {res}0.0000
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/tahseenjahan/Downloads/codes2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}29 Apr 2024, 15:47:16
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
